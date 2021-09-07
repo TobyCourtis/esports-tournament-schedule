@@ -20,7 +20,7 @@ def get_tournaments():
 
     cur = conn.cursor()
 
-    cur.execute("""SELECT * FROM Tournaments WHERE ;""")
+    cur.execute("""SELECT * FROM Tournaments;""")
     query_results = cur.fetchall()
 
     results_dict = tournament_to_json(query_results)
