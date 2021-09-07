@@ -1,13 +1,20 @@
-from flask import Flask, render_template, request, redirect, Response, url_for, json, Response
+from flask import Flask, render_template, request, redirect, Response, url_for, json, Response, send_from_directory
+from flask_cors import CORS  # comment this on deployment
 import databaseService
 
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__, static_url_path='', static_folder='react-frontend/build')
+CORS(app)
 
 
 # HTML Route
 @app.route("/")
 def render_index():
     return render_template("index.html")
+
+
+@app.route("/react", defaults={'path': ''})
+def render_react_index(path):
+    return send_from_directory(app.static_folder, 'index.html')
 
 
 # API routes
