@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios'
 
 interface IMessage {
-    message: string
+    message: any
 }
 
 interface IResponse {
@@ -12,8 +12,8 @@ interface IResponse {
     data: IMessage
 }
 
-const defaultImessage : IMessage = {message: 'nothing yet initialised'}
-const defaultIResponse : IResponse = {status: 400, data: defaultImessage}
+const defaultImessage: IMessage = {message: 'nothing yet initialised'}
+const defaultIResponse: IResponse = {status: 400, data: defaultImessage}
 
 function App() {
     const [getMessage, setGetMessage] = useState<IResponse>(defaultIResponse)
@@ -21,7 +21,15 @@ function App() {
     useEffect(() => {
         axios.get('http://localhost:5000/players').then(response => {
             console.log("SUCCESS", response)
-            setGetMessage(response)
+            const res: IResponse = {
+                status: response.status,
+                data: {
+                    message: response.data[0].GamerTag
+                }
+            };
+            setGetMessage(res)
+            console.log('get message:', getMessage)
+            console.log('another one')
         }).catch(error => {
             console.log(error)
         })
