@@ -20,7 +20,6 @@ function App() {
 
     useEffect(() => {
         axios.get('http://localhost:5000/players').then(response => {
-            console.log("SUCCESS", response)
             const res: IResponse = {
                 status: response.status,
                 data: {
@@ -28,8 +27,6 @@ function App() {
                 }
             };
             setGetMessage(res)
-            console.log('get message:', getMessage)
-            console.log('another one')
         }).catch(error => {
             console.log(error)
         })
