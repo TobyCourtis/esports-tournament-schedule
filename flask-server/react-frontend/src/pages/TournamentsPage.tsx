@@ -1,47 +1,22 @@
 import TournamentsTable from "../components/TournamentsTable";
 import {GetTournaments} from "../services/tournamentsClient";
-
-export interface ITournament {
-    ID: number,
-    Name: string,
-    Organisation: string,
-    OrganisationLink: string,
-    Date: Date,
-    PrizePool: string,
-    Players: string,
-    Location: string,
-    Stream: string,
-    FormatName: string,
-    FormatLink: string
-}
+import {ITournament} from '../types/TournamentTypes';
+import {useEffect, useState} from "react";
 
 function TournamentsPage() {
 
-    function createData(name: string, calories: number, fat: number, carbs: number, protein: number) {
-        return {name, calories, fat, carbs, protein};
-    }
+    const [tournaments, setTournaments] = useState<ITournament[]>([]);
 
-    interface IRow {
-        name: string,
-        calories: number,
-        fat: number,
-        carbs: number,
-        protein: number
-    }
+    useEffect(() => {
+        async function fetchMyAPI() {
+            let response = await GetTournaments()
+            setTournaments(response)
+        }
 
-    const rows: IRow[] = [
-        createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-        createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-        createData('Eclair', 262, 16.0, 24, 6.0),
-        createData('Cupcake', 305, 3.7, 67, 4.3),
-        createData('Gingerbread', 356, 16.0, 49, 3.9),
-    ];
+        fetchMyAPI();
+    }, [setTournaments]);
 
-    return (
-        <div>
-            <TournamentsTable rows={rows}/>
-        </div>
-    )
+    return tournaments ? <TournamentsTable tournaments={tournaments}/> : null
 }
 
 export default TournamentsPage;

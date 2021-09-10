@@ -7,7 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import ITournament from '../pages/TournamentsPage'
+import {ITournament} from '../types/TournamentTypes';
 
 const useStyles = makeStyles({
     table: {
@@ -15,16 +15,8 @@ const useStyles = makeStyles({
     },
 });
 
-interface IRow {
-    name: string,
-    calories: number,
-    fat: number,
-    carbs: number,
-    protein: number
-}
-
 interface IProps {
-    rows: IRow[]
+    tournaments: ITournament[]
 }
 
 function TournamentsTable(props: IProps) {
@@ -35,24 +27,22 @@ function TournamentsTable(props: IProps) {
             <Table className={classes.table} aria-label="simple table">
                 <TableHead>
                     <TableRow>
-                        <TableCell>Dessert (100g serving)</TableCell>
-                        <TableCell align="right">Calories</TableCell>
-                        <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                        <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                        <TableCell>Name</TableCell>
+                        <TableCell align="right">Prize Pool</TableCell>
+                        <TableCell align="right">Date</TableCell>
+                        <TableCell align="right">Stream</TableCell>
+                        <TableCell align="right">FormatName</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {props.rows.map((row) => (
-                        <TableRow key={row.name}>
-                            <TableCell component="th" scope="row">
-                                {row.name}
-                            </TableCell>
-                            <TableCell align="right">{row.calories}</TableCell>
-                            <TableCell align="right">{row.fat}</TableCell>
-                            <TableCell align="right">{row.carbs}</TableCell>
-                            <TableCell align="right">{row.protein}</TableCell>
-                        </TableRow>))}
+                    {props.tournaments.length > 0 ? props.tournaments.map((tournament) => (
+                        <TableRow key={tournament.Name}>
+                            <TableCell component="th" scope="row">{tournament.Name}</TableCell>
+                            <TableCell align="right">{tournament.PrizePool}</TableCell>
+                            <TableCell align="right">{tournament.Date}</TableCell>
+                            <TableCell align="right">{tournament.Stream}</TableCell>
+                            <TableCell align="right">{tournament.FormatName}</TableCell>
+                        </TableRow>)) : <p>Was still called with []</p>}
                 </TableBody>
             </Table>
         </TableContainer>
