@@ -35,14 +35,16 @@ function TournamentsTable(props: IProps) {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {props.tournaments.length > 0 ? props.tournaments.map((tournament) => (
-                        <TableRow key={tournament.Name}>
-                            <TableCell component="th" scope="row">{tournament.Name}</TableCell>
-                            <TableCell align="right">{tournament.PrizePool}</TableCell>
-                            <TableCell align="right">{tournament.Date}</TableCell>
-                            <TableCell align="right">{tournament.Stream}</TableCell>
-                            <TableCell align="right">{tournament.FormatName}</TableCell>
-                        </TableRow>)) : <p>Was still called with []</p>}
+                    {
+                        props.tournaments.map((tournament) => (
+                            <TableRow key={tournament.Name}>
+                                <TableCell component="th" scope="row">{tournament.Name}</TableCell>
+                                <TableCell align="right">{tournament.PrizePool}</TableCell>
+                                <TableCell align="right">{tournament.Date}</TableCell>
+                                <TableCell align="right">{tournament.Stream}</TableCell>
+                                <TableCell align="right">{tournament.FormatName}</TableCell>
+                            </TableRow>))
+                    }
                 </TableBody>
             </Table>
         </TableContainer>
