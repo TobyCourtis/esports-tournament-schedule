@@ -1,4 +1,3 @@
-import axios from "axios";
 import {ITournament} from '../types/TournamentTypes';
 
 export const GetTournaments = async (): Promise<ITournament[]> => {

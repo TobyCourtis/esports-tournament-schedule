@@ -1,5 +1,5 @@
 import TournamentsTable from "../components/TournamentsTable";
-import {GetTournaments} from "../services/tournamentsClient";
+import {GetTournaments} from "../services/TournamentsClient";
 import {ITournament} from '../types/TournamentTypes';
 import {useEffect, useState} from "react";
 
