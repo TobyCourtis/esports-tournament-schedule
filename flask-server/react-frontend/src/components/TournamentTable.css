@@ -1,0 +1,20 @@
+.tournament-date-heading {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}
+
+
+.tournament-data {
+    width: 100%;
+    text-align: center;
+}
+
+.tournament-data-item {
+    width: 25%;
+    display: inline-block;
+}
