@@ -8,12 +8,12 @@ function TournamentsPage() {
     const [tournaments, setTournaments] = useState<ITournament[]>([]);
 
     useEffect(() => {
-        async function fetchMyAPI() {
+        async function fetchTournaments() {
             let response = await GetTournaments()
             setTournaments(response)
         }
 
-        fetchMyAPI();
+        fetchTournaments();
     }, [setTournaments]);
 
     return tournaments ? <TournamentsTable tournaments={tournaments}/> : null
