@@ -1,5 +1,4 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
 import {ITournament} from '../types/TournamentTypes';
 import './TournamentTable.css'
 
@@ -20,7 +19,9 @@ function TournamentsTable(props: IProps) {
                         <div className='tournament-data'>
                             <p className='tournament-data-item'>{tournament.Name}</p>
                             <p className='tournament-data-item'>{tournament.PrizePool}</p>
-                            <p className='tournament-data-item'>{tournament.Stream}</p>
+                            <a className='tournament-data-item' href={tournament.Stream}>
+                                {tournament.Stream.split('//')[1]}
+                            </a>
                             <a className='tournament-data-item' href={tournament.FormatLink}>
                                 {tournament.FormatName}
                             </a>
