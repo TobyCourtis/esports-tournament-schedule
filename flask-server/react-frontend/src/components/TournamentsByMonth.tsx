@@ -1,7 +1,7 @@
 import {Months} from "../types/Months";
 import React from "react";
 import {ITournament} from "../types/TournamentTypes";
-import './TournamentTable.css';
+import './TournamentsByMonth.css';
 
 interface IProps {
     tournaments: ITournament[],

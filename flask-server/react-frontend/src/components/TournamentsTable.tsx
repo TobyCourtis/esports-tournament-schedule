@@ -21,8 +21,8 @@ function TournamentsTable(props: IProps) {
         <div>
             {
                 months.map((month) => (
-                    <div>
-                        <h2>{month}</h2>
+                    <div className={'tournaments-by-month-div'}>
+                        <h2 className={'month-heading'}>{month}</h2>
                         <TournamentsByMonth monthValue={month} tournaments={props.tournaments}/>
                     </div>
                 ))

@@ -1,24 +1,8 @@
-.tournaments-div {
-    border: 2px solid rgba(7, 4, 4, 0.57);
+.tournaments-by-month-div {
+    width: 100%;
 }
 
-.tournament-date-heading {
-    width: 100%;
+.month-heading {
     text-align: left;
-    padding: 20px;
-}
-
-hr.solid {
-    border-top: 3px solid #bbb;
-}
-
-
-.tournament-data {
-    width: 100%;
-    text-align: center;
-}
-
-.tournament-data-item {
-    width: 25%;
-    display: inline-block;
+    padding: 10px;
 }
