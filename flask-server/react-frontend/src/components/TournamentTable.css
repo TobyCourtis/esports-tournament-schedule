@@ -1,3 +1,7 @@
+.tournaments-div {
+    border: 2px solid rgba(7, 4, 4, 0.57);
+}
+
 .tournament-date-heading {
     width: 100%;
     text-align: left;
