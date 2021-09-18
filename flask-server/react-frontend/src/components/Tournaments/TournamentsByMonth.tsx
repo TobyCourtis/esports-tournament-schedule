@@ -23,6 +23,7 @@ function TournamentsByMonth({monthName, tournaments}: IProps) {
                                 <div className='tournaments-inner-div'>
                                     <div className='tournament-data'>
                                         <DateDetails date={date}/>
+                                        <hr className={'vertical-line'}/>
                                         <p className='tournament-data-item'>{tournament.Name}</p>
                                         <p className='tournament-data-item'>{tournament.PrizePool}</p>
                                         <a className='tournament-data-item' href={tournament.Stream}>
