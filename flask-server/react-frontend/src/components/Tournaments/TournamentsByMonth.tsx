@@ -1,7 +1,8 @@
-import {Months} from "../types/DateEnums";
+import {Months} from "../../types/DateEnums";
 import React from "react";
-import {ITournament} from "../types/TournamentTypes";
+import {ITournament} from "../../types/TournamentTypes";
 import './TournamentsByMonth.css';
+import DateDetails from './components/DateDetails'
 
 interface IProps {
     tournaments: ITournament[],
@@ -21,7 +22,7 @@ function TournamentsByMonth({monthName, tournaments}: IProps) {
                             <div className='tournaments-outer-div'>
                                 <div className='tournaments-inner-div'>
                                     <div className='tournament-data'>
-                                        <p className='tournament-data-item'>{tournament.Date.toLocaleString().substring(0, 12)}</p>
+                                        <DateDetails date={date}/>
                                         <p className='tournament-data-item'>{tournament.Name}</p>
                                         <p className='tournament-data-item'>{tournament.PrizePool}</p>
                                         <a className='tournament-data-item' href={tournament.Stream}>

@@ -10,11 +10,10 @@
 
 .tournaments-inner-div {
     height: 95%;
+    min-height: 95%;
     border: 2px solid rgba(7, 4, 4, 0.57);
     border-radius: 0px;
 }
-
-
 
 
 /* individual tournament row div */
