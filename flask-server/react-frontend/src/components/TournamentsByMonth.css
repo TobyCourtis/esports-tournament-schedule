@@ -1,24 +1,40 @@
-.tournaments-div {
+.tournaments-outer-div {
+    padding: 5px;
+    height: 20vh;
+    /*min-height: 10vh;*/
+}
+
+.tournaments-inner-div:hover {
+    background-color: #bbbbbb;
+}
+
+.tournaments-inner-div {
+    height: 95%;
     border: 2px solid rgba(7, 4, 4, 0.57);
+    border-radius: 0px;
 }
 
-.tournament-date-heading {
-    width: 100%;
-    text-align: left;
-    padding: 20px;
-}
 
+
+
+/* individual tournament row div */
 hr.solid {
     border-top: 3px solid #bbb;
 }
 
+a {
+    color: ivory;
+}
 
 .tournament-data {
+    display: flex;
+    align-items: center;
+    height: 100%;
     width: 100%;
     text-align: center;
 }
 
 .tournament-data-item {
-    width: 25%;
+    width: 20%;
     display: inline-block;
 }

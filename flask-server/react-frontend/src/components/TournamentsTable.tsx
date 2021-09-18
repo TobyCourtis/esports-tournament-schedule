@@ -1,7 +1,7 @@
 import React from 'react';
 import {ITournament} from '../types/TournamentTypes';
 import './TournamentTable.css'
-import {Months} from "../types/Months";
+import {Months} from "../types/DateEnums";
 import TournamentsByMonth from "./TournamentsByMonth";
 
 interface IProps {
@@ -10,8 +10,8 @@ interface IProps {
 
 function TournamentsTable(props: IProps) {
 
-    var monthNow = new Date().getMonth()
-    var months: string[] = []
+    let monthNow = new Date().getMonth();
+    const months: string[] = [];
     for (let i = 0; i < 5; i++) {
         months.push(Months[monthNow % 12])
         monthNow++
@@ -23,7 +23,7 @@ function TournamentsTable(props: IProps) {
                 months.map((month) => (
                     <div className={'tournaments-by-month-div'}>
                         <h2 className={'month-heading'}>{month}</h2>
-                        <TournamentsByMonth monthValue={month} tournaments={props.tournaments}/>
+                        <TournamentsByMonth monthName={month} tournaments={props.tournaments}/>
                     </div>
                 ))
             }
