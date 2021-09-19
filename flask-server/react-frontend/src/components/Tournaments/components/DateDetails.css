@@ -27,20 +27,20 @@
 
 /* sizing of each p tag*/
 .day-of-month-div {
-    font-size: 200%;
+    font-size: 225%;
     height: 45%;
     align-items: end;
 }
 
 .day-of-week-div {
-    font-size: 75%;
+    font-size: 95%;
     height: 20%;
     align-items: start;
 }
 
 .time-div {
     align-items: start;
-    font-size: 105%;
-    color: #bbbbbb;
+    font-size: 90%;
+    color: #C4C7C8;
     height: 35%;
 }
