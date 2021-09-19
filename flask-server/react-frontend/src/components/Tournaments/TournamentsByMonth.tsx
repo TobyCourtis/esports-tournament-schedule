@@ -19,7 +19,7 @@ function TournamentsByMonth({monthName, tournaments}: IProps) {
                     // @ts-ignore // ts believes string monthValue leads could lead to non integer
                     return Months[monthName] === date.getMonth() ?
                         (
-                            <div className='tournaments-outer-div'>
+                            <div key={tournament.ID + '-div-key'} className='tournaments-outer-div'>
                                 <div className='tournaments-inner-div'>
                                     <div className='tournament-data'>
                                         <DateDetails date={date}/>
