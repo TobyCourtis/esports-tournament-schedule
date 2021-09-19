@@ -1,0 +1,47 @@
+.date {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+
+.date-item-div {
+    flex-grow: 1;
+
+    /*align items vertically and horizontally centred*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+
+    /*reset user stylesheet agent*/
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/* sizing of each p tag*/
+.day-of-month-div {
+    font-size: 225%;
+    height: 45%;
+    align-items: end;
+}
+
+.day-of-week-div {
+    font-size: 95%;
+    height: 20%;
+    align-items: start;
+}
+
+.time-div {
+    align-items: start;
+    font-size: 90%;
+    color: #C4C7C8;
+    height: 35%;
+}

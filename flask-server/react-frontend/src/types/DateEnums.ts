@@ -12,3 +12,13 @@ export enum Months{
     November,
     December
 }
+
+export enum Days{
+    Sun,
+    Mon,
+    Tue,
+    Wed,
+    Thu,
+    Fri,
+    Sat
+}
