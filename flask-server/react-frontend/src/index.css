@@ -1,7 +1,7 @@
 body {
-    background-color: dimgray;
+    background-color: rgba(0,0,0,0.8);
     margin: 0;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto', 'Trebuchet MS', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

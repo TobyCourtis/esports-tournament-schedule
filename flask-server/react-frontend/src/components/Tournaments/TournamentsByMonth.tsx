@@ -16,7 +16,7 @@ function TournamentsByMonth({monthName, tournaments}: IProps) {
             {
                 tournaments.map((tournament) => {
                     const date = new Date(tournament.Date);
-                    // @ts-ignore // ts believes string monthValue leads could lead to non integer
+                    // @ts-ignore // ts lint believes monthName string with enum could lead to non-integer value
                     return Months[monthName] === date.getMonth() ?
                         (
                             <div key={tournament.ID + '-div-key'} className='tournaments-outer-div'>
