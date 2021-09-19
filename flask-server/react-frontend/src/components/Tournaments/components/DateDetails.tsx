@@ -12,13 +12,13 @@ function DateDetails({date}: IProps) {
 
     return (
         <div className={'date tournament-data-item'}>
-            <div className={'date-item-div'}>
+            <div className={'date-item-div day-of-month'}>
                 <p className={'date-item'}>{dateLocale.substring(0, 2)}</p>
             </div>
-            <div className={'date-item-div'}>
+            <div className={'date-item-div day-of-week'}>
                 <p className={'date-item'}>{Days[date.getDay()]}</p>
             </div>
-            <div className={'date-item-div'}>
+            <div className={'date-item-div time'}>
                 <p className={'date-item'}>{dateLocale.substring(12, 17)}</p>
             </div>
         </div>
