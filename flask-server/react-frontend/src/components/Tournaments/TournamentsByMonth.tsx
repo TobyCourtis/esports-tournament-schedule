@@ -24,17 +24,22 @@ function TournamentsByMonth({monthName, tournaments}: IProps) {
                                     <div className='tournament-data'>
                                         <DateDetails date={date}/>
                                         <hr className={'vertical-line'}/>
-                                        <p className='tournament-data-item'>{tournament.Name}</p>
-                                        <div className='tournament-data-item prize-pool-div'>
-                                            <img className={'trophy-img'} src={'trophy.png'} alt="trophy"/>
-                                            <p>{tournament.PrizePool}</p>
+                                        <div className={'main-tournament-info-div'}>
+                                            <p className={'tournament-name'}>{tournament.Name}</p>
+                                            <div className='prize-pool-div'>
+                                                <img className={'trophy-img'} src={'trophy.png'} alt="trophy"/>
+                                                <p>{tournament.PrizePool}</p>
+                                            </div>
+                                            <a className={'tournament-format'} href={tournament.FormatLink}>
+                                                Format: {tournament.FormatName}
+                                            </a>
                                         </div>
-                                        <a className='tournament-data-item' href={tournament.Stream}>
-                                            {tournament.Stream.split('//')[1]}
-                                        </a>
-                                        <a className='tournament-data-item' href={tournament.FormatLink}>
-                                            {tournament.FormatName}
-                                        </a>
+                                        <div className={'spacer-div'}/>
+                                        <div className={'stream-link-div'}>
+                                            <a href={tournament.Stream}>
+                                                <img src={'monitor.png'} className={'monitor-img'}/>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>) : null

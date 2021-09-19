@@ -1,3 +1,7 @@
+p {
+    margin: 0;
+}
+
 .tournaments-outer-div {
     padding: 5px;
     height: 20vh;
@@ -19,6 +23,10 @@ hr.solid {
     border-top: 3px solid #bbb;
 }
 
+hr {
+    margin: 0;
+}
+
 a {
     color: ivory;
 }
@@ -31,10 +39,6 @@ a {
     text-align: center;
 }
 
-.tournament-data-item {
-    width: 22.5%;
-    display: inline-block;
-}
 
 .vertical-line {
     width: 0px;
@@ -42,12 +46,54 @@ a {
 }
 
 
+/* main tournament info */
+.main-tournament-info-div {
+    width: 17.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    align-items: baseline;
+    padding-left: 20px;
+    text-align: left;
+}
+
 .prize-pool-div {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
+/* empty spacer div*/
+.spacer-div {
+    width: 57.5%;
+}
+
+.stream-link-div {
+    width: 10%;
+}
+
+/* all tournament row items */
+.tournament-data-item {
+    display: inline-block;
+}
+
+
 .trophy-img {
-    height: 1.25em;
+    height: 1.1em;
+    /*transform: translateX(-0.25em);*/
+}
+
+.monitor-img {
+    height: 4em;
+}
+
+.tournament-name {
+    font-size: 1.25em;
+
+}
+
+.tournament-format {
+    font-size: 0.8em;
 }
