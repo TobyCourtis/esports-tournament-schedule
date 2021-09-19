@@ -25,7 +25,10 @@ function TournamentsByMonth({monthName, tournaments}: IProps) {
                                         <DateDetails date={date}/>
                                         <hr className={'vertical-line'}/>
                                         <p className='tournament-data-item'>{tournament.Name}</p>
-                                        <p className='tournament-data-item'>{tournament.PrizePool}</p>
+                                        <div className='tournament-data-item prize-pool-div'>
+                                            <img className={'trophy-img'} src={'trophy.png'} alt="trophy"/>
+                                            <p>{tournament.PrizePool}</p>
+                                        </div>
                                         <a className='tournament-data-item' href={tournament.Stream}>
                                             {tournament.Stream.split('//')[1]}
                                         </a>
