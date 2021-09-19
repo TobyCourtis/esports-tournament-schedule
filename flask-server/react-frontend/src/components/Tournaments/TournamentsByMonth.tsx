@@ -25,14 +25,22 @@ function TournamentsByMonth({monthName, tournaments}: IProps) {
                                         <DateDetails date={date}/>
                                         <hr className={'vertical-line'}/>
                                         <div className={'main-tournament-info-div'}>
-                                            <p className={'tournament-name'}>{tournament.Name}</p>
-                                            <div className='prize-pool-div'>
+                                            <div className={'main-tournament-info-item tournament-name-div'}>
+                                                <p className={'tournament-name'}>{tournament.Name}</p>
+                                            </div>
+                                            <div className='main-tournament-info-item prize-pool-div'>
                                                 <img className={'trophy-img'} src={'trophy.png'} alt="trophy"/>
                                                 <p>{tournament.PrizePool}</p>
                                             </div>
-                                            <a className={'tournament-format'} href={tournament.FormatLink}>
-                                                Format: {tournament.FormatName}
-                                            </a>
+                                            <div className={'main-tournament-info-item tournament-format-div'}>
+                                                <a className={'tournament-format'} href={tournament.FormatLink}>
+                                                    Format: {tournament.FormatName}
+                                                </a>
+                                            </div>
+                                            <div className={'main-tournament-info-item main-tournament-spacer-div'} />
+                                            <div className={'main-tournament-info-item tournament-rules-div'}>
+                                                <a href={tournament.FormatLink}>Rules</a>
+                                            </div>
                                         </div>
                                         <div className={'spacer-div'}/>
                                         <div className={'stream-link-div'}>
