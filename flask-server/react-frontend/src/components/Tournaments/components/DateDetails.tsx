@@ -12,16 +12,16 @@ function DateDetails({date}: IProps) {
 
     return (
         <div className={'date tournament-data-item'}>
-            <div className={'date-item-div day-of-month'}>
-                <p className={'date-item'}>{dateLocale.substring(0, 2)}</p>
+            <div className={'date-item-div day-of-month-div'}>
+                <span className={'date-item'}>{dateLocale.substring(0, 2)}</span>
             </div>
-            <div className={'date-item-div day-of-week'}>
-                <p className={'date-item'}>{Days[date.getDay()]}</p>
+            <div className={'date-item-div day-of-week-div'}>
+                <span className={'date-item'}>{Days[date.getDay()]}</span>
             </div>
-            <div className={'date-item-div time'}>
+            <div className={'date-item-div time-div'}>
                 {/* TODO comment back in when data is more rich */}
                 {/*<p className={'date-item'}>{dateLocale.substring(12, 17)}</p>*/}
-                <p className={'date-item'}>19:30</p>
+                <span className={'date-item'}>19:30</span>
             </div>
         </div>
     );
