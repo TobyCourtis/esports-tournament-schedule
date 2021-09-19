@@ -19,7 +19,9 @@ function DateDetails({date}: IProps) {
                 <p className={'date-item'}>{Days[date.getDay()]}</p>
             </div>
             <div className={'date-item-div time'}>
-                <p className={'date-item'}>{dateLocale.substring(12, 17)}</p>
+                {/* comment out when data is more rich */}
+                {/*<p className={'date-item'}>{dateLocale.substring(12, 17)}</p>*/}
+                <p className={'date-item'}>19:30</p>
             </div>
         </div>
     );
