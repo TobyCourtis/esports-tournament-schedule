@@ -3,18 +3,15 @@ p {
 }
 
 .tournaments-outer-div {
-    padding: 2.5px 10px;
+    padding: 0px 20px;
     height: 20vh;
 }
 
-.tournaments-inner-div:hover {
-    background-color: #737373;
-}
-
 .tournaments-inner-div {
-    height: 95%;
+    height: 100%;
     border: 2px solid rgba(7, 4, 4, 0.57);
     border-radius: 0px;
+    background-color: #737373;
 }
 
 
@@ -117,6 +114,14 @@ a {
 
 .monitor-img {
     height: 4em;
+}
+
+.twitch-img {
+    height: 5em;
+}
+
+.youtube-img {
+    height: 2.75em;
 }
 
 .tournament-name {

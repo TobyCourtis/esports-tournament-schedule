@@ -26,7 +26,7 @@ function TournamentsByMonth({monthName, tournaments}: IProps) {
                                         <hr className={'vertical-line'}/>
                                         <div className={'main-tournament-info-div'}>
                                             <div className={'main-tournament-info-item tournament-name-div'}>
-                                                <p className={'tournament-name'}>{tournament.Name}</p>
+                                                <b className={'tournament-name'}>{tournament.Name}</b>
                                             </div>
                                             <div className='main-tournament-info-item prize-pool-div'>
                                                 <img className={'trophy-img'} src={'trophy.png'} alt="trophy"/>
@@ -45,7 +45,13 @@ function TournamentsByMonth({monthName, tournaments}: IProps) {
                                         <div className={'spacer-div'}/>
                                         <div className={'stream-link-div'}>
                                             <a href={tournament.Stream}>
-                                                <img src={'monitor.png'} className={'monitor-img'}/>
+                                                {
+                                                    // TODO change Stream icon depending on stream URL
+                                                    tournament.Name == 'HP Omen' ?
+                                                        <img src={'youtube.png'} className={'youtube-img'}/> :
+                                                        <img src={'twitch.png'} className={'twitch-img'}/>
+                                                }
+
                                             </a>
                                         </div>
                                     </div>
