@@ -1,8 +1,14 @@
 import {ITournament} from '../types/TournamentTypes';
 
 export const GetTournaments = async (): Promise<ITournament[]> => {
-    const data: Response = mockedTournamentEndpointResponse
-    const dataJson: ITournament[] = await data.json();
+    var data: Response | null;
+    if (process.env.REACT_APP_STUBBED_RESPONSE === 'true') {
+        data = mockedTournamentEndpointResponse
+    } else {
+        data = await fetch('http://localhost:5000/tournaments')
+    }
+
+    const dataJson: ITournament[] = await data.json()
     return dataJson
 };
 
