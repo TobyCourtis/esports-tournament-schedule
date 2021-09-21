@@ -37,7 +37,7 @@ function TournamentsByMonth({monthName, tournaments}: IProps) {
                                                     Format: {tournament.FormatName}
                                                 </a>
                                             </div>
-                                            <div className={'main-tournament-info-item main-tournament-spacer-div'} />
+                                            <div className={'main-tournament-info-item main-tournament-spacer-div'}/>
                                             <div className={'main-tournament-info-item tournament-rules-div'}>
                                                 <a href={tournament.FormatLink}>Rules</a>
                                             </div>
@@ -47,9 +47,11 @@ function TournamentsByMonth({monthName, tournaments}: IProps) {
                                             <a href={tournament.Stream}>
                                                 {
                                                     // TODO change Stream icon depending on stream URL
-                                                    tournament.Name == 'HP Omen' ?
-                                                        <img src={'youtube.png'} className={'youtube-img'}/> :
-                                                        <img src={'twitch.png'} className={'twitch-img'}/>
+                                                    tournament.Name === 'HP Omen' ?
+                                                        <img src={'youtube.png'} className={'youtube-img'}
+                                                             alt={'YT img'}/> :
+                                                        <img src={'twitch.png'} className={'twitch-img'}
+                                                             alt={'Twitch img'}/>
                                                 }
 
                                             </a>
