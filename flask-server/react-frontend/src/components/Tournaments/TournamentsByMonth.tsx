@@ -48,12 +48,11 @@ function TournamentsByMonth({monthName, tournaments}: IProps) {
                                                 {
                                                     // TODO change Stream icon depending on stream URL
                                                     tournament.Name === 'HP Omen' ?
-                                                        <img src={'youtube.png'} className={'youtube-img'}
+                                                        <img src={'youtube.png'} className={'stream-img'}
                                                              alt={'YT img'}/> :
-                                                        <img src={'twitch.png'} className={'twitch-img'}
+                                                        <img src={'twitch.png'} className={'stream-img'}
                                                              alt={'Twitch img'}/>
                                                 }
-
                                             </a>
                                         </div>
                                     </div>

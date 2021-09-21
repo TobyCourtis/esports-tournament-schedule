@@ -77,13 +77,13 @@ a {
 }
 
 .main-tournament-spacer-div {
-    height: 15%;
-    max-height: 15%;
+    height: 10%;
+    max-height: 10%;
 }
 
 .tournament-rules-div {
-    height: 20%;
-    max-height: 20%;
+    height: 25%;
+    max-height: 25%;
     font-size: 0.8em;
 }
 
@@ -94,6 +94,7 @@ a {
 
 .stream-link-div {
     width: 10%;
+    height: auto;
 }
 
 /* all tournament row items */
@@ -116,12 +117,9 @@ a {
     height: 4em;
 }
 
-.twitch-img {
-    height: 5em;
-}
-
-.youtube-img {
-    height: 2.75em;
+.stream-img {
+    height: auto;
+    width: 100%;
 }
 
 .tournament-name {
