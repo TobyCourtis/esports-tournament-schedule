@@ -14,6 +14,10 @@ p {
     border-radius: 0px;
 }
 
+.tournaments-inner-div:hover {
+    background-color: #423f3f;
+}
+
 
 /* individual tournament row div */
 hr.solid {
