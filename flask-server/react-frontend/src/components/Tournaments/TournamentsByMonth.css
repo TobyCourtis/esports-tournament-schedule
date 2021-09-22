@@ -3,15 +3,15 @@ p {
 }
 
 .tournaments-outer-div {
-    padding: 0px 20px;
+    padding: 0px 5vw;
     height: 20vh;
 }
 
 .tournaments-inner-div {
+    background-color: #333333;
     height: 100%;
     border: 2px solid rgba(7, 4, 4, 0.57);
     border-radius: 0px;
-    background-color: #737373;
 }
 
 
@@ -100,6 +100,7 @@ a {
 /* all tournament row items */
 .tournament-data-item {
     display: inline-block;
+    min-width: 56px;
 }
 
 .tournament-name-div {
@@ -125,8 +126,10 @@ a {
 .tournament-name {
     padding-top: 0.3em;
     font-size: 1.3em;
+    white-space: nowrap;
 }
 
 .tournament-format {
     font-size: 0.8em;
+    white-space: nowrap;
 }
