@@ -30,7 +30,7 @@
 .day-of-month-div {
     font-size: 225%;
     height: 45%;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .day-of-week-div {
