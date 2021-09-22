@@ -34,6 +34,7 @@ a {
 
 .tournament-data {
     display: flex;
+    flex-direction: row;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -97,8 +98,11 @@ a {
 }
 
 .stream-link-div {
+    margin-left: auto;
     width: 10%;
+    min-width: 75px;
     height: auto;
+    padding-right: 30px;
 }
 
 /* all tournament row items */
