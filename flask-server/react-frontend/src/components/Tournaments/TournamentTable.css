@@ -4,7 +4,18 @@
     width: 100%;
 }
 
+.month-heading-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.month-heading-collapse-btn {
+    cursor: pointer;
+    transform: translateY(-0.3em);
+}
+
 .month-heading {
     text-align: left;
-    padding: 1.5vw 2.5vw;
+    padding: 1.5vw 1.5vw 2vw 2.5vw;
 }

@@ -100,7 +100,7 @@ a {
 .stream-link-div {
     margin-left: auto;
     width: 10%;
-    min-width: 75px;
+    min-width: 100px;
     height: auto;
     padding-right: 30px;
 }

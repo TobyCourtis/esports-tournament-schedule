@@ -2,9 +2,7 @@ import React from 'react';
 import {ITournament} from '../../types/TournamentTypes';
 import './TournamentTable.css'
 import {Months} from "../../types/DateEnums";
-import TournamentsByMonth from "./TournamentsByMonth";
-import Icon from '@mui/material/Icon';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import CollapsableMonth from "./CollapsableMonth";
 
 interface IProps {
     tournaments: ITournament[]
@@ -23,13 +21,7 @@ function TournamentsTable(props: IProps) {
         <div>
             {
                 months.map((month) => (
-                    <div key={month + '-div-key'} className={'tournaments-by-month-div'}>
-                        <div>
-                            <h2 className={'month-heading'}>{month}</h2>
-                            <KeyboardArrowDownIcon />
-                        </div>
-                        <TournamentsByMonth monthName={month} tournaments={props.tournaments}/>
-                    </div>
+                    <CollapsableMonth monthName={month} tournaments={props.tournaments} key={month + 'collapsing-div'}/>
                 ))
             }
         </div>
