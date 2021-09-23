@@ -12,10 +12,10 @@
 
 .month-heading-collapse-btn {
     cursor: pointer;
-    transform: translateY(-0.3em);
+    transform: translateY(-0.2em);
 }
 
 .month-heading {
     text-align: left;
-    padding: 1.5vw 1.5vw 2vw 2.5vw;
+    padding: 2vw 2.5vw 2vw 1.5vw;
 }
