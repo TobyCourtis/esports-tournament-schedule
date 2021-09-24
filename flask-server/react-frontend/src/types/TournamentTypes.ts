@@ -5,7 +5,6 @@ export interface ITournament {
     OrganisationLink: string,
     Date: Date,
     PrizePool: string,
-    Players: string,
     Location: string,
     Stream: string,
     FormatName: string,
