@@ -16,6 +16,7 @@
 }
 
 .month-heading {
+    width: 7em;
     text-align: left;
     padding: 2vw 2.5vw 2vw 1.5vw;
 }
