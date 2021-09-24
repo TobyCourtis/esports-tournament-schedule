@@ -2,10 +2,10 @@ import psycopg2
 
 
 def get_tournament_by_id(id):
-    conn = psycopg2.connect(host="localhost", port=5432, database="test", user="postgres", password="password")
+    conn = psycopg2.connect(host="localhost", port=5432, database="esportsdb", user="postgres", password="password")
 
     cur = conn.cursor()
-    query = """SELECT * FROM Tournaments WHERE id = {0};""".format(id)
+    query = """SELECT * FROM tournaments WHERE tournamentID = {0};""".format(id)
     cur.execute(query)
     query_results = cur.fetchall()
 
@@ -16,11 +16,11 @@ def get_tournament_by_id(id):
 
 
 def get_tournaments():
-    conn = psycopg2.connect(host="localhost", port=5432, database="test", user="postgres", password="password")
+    conn = psycopg2.connect(host="localhost", port=5432, database="esportsdb", user="postgres", password="password")
 
     cur = conn.cursor()
 
-    cur.execute("""SELECT * FROM Tournaments;""")
+    cur.execute("""SELECT * FROM tournaments;""")
     query_results = cur.fetchall()
 
     results_dict = tournament_to_json(query_results)
@@ -39,11 +39,10 @@ def tournament_to_json(tournament_results):
             'OrganisationLink': i[3],
             'Date': i[4],
             'PrizePool': i[5],
-            'Players': i[6],
-            'Location': i[7],
-            'Stream': i[8],
-            'FormatName': i[9],
-            'FormatLink': i[10]
+            'Location': i[6],
+            'Stream': i[7],
+            'FormatName': i[8],
+            'FormatLink': i[9]
         })
     return out
 
@@ -53,23 +52,24 @@ def player_to_json(player_results):
     for i in player_results:
         out.append({
             'ID': i[0],
-            'Name': i[1],
-            'GamerTag': i[2],
-            'Age': i[3],
-            'Organisation': i[4],
-            'OrganisationLink': i[5],
-            'Stream': i[6],
-            'Image': i[7],
-            'Earnings': i[8]
+            'FirstName': i[1],
+            'Surname': i[2],
+            'GamerTag': i[3],
+            'Age': i[4],
+            'Organisation': i[5],
+            'OrganisationLink': i[6],
+            'Stream': i[7],
+            'Image': i[8],
+            'Earnings': i[9]
         })
     return out
 
 
 def get_players():
-    conn = psycopg2.connect(host="localhost", port=5432, database="test", user="postgres", password="password")
+    conn = psycopg2.connect(host="localhost", port=5432, database="esportsdb", user="postgres", password="password")
     cur = conn.cursor()
 
-    cur.execute("""SELECT * FROM Players;""")
+    cur.execute("""SELECT * FROM players;""")
     query_results = cur.fetchall()
 
     # tuple to dictionary
@@ -79,10 +79,10 @@ def get_players():
     return results_dict
 
 def get_player_by_id(id):
-    conn = psycopg2.connect(host="localhost", port=5432, database="test", user="postgres", password="password")
+    conn = psycopg2.connect(host="localhost", port=5432, database="esportsdb", user="postgres", password="password")
     cur = conn.cursor()
 
-    query = """SELECT * FROM Players WHERE id = {0};""".format(id)
+    query = """SELECT * FROM players WHERE playerID = {0};""".format(id)
     cur.execute(query)
     query_results = cur.fetchall()
 
