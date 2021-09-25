@@ -5,7 +5,7 @@ import TournamentsByMonth from "./TournamentsByMonth";
 import React, {useState} from "react";
 import {ITournament} from "../../types/TournamentTypes";
 import {Months} from "../../types/DateEnums";
-import './TournamentsByMonth.css';
+import './CollapsableMonth.css'
 
 interface IProps {
     tournaments: ITournament[],

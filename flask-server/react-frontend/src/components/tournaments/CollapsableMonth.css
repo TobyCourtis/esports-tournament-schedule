@@ -1,0 +1,24 @@
+.tournaments-by-month-div {
+    /* text colouring*/
+    color: ivory;
+    width: 100%;
+}
+
+.month-heading-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.month-heading-collapse-btn {
+    cursor: pointer;
+    transform: translateY(-0.05em);
+}
+
+.month-heading {
+    margin: 0;
+    font-size: 1.5em;
+    width: 6.5em;
+    text-align: left;
+    padding: 2vw 2.5vw 2vw 1.5vw;
+}
