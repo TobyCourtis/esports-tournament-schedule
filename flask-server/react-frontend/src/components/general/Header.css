@@ -1,7 +1,6 @@
 .header-div{
-    position: fixed;
-    border-top: solid 1px rgb(125, 116, 102);
-    border-bottom: solid 1px rgb(125, 116, 102);
+    border-top: solid 1px rgb(169, 164, 149);
+    border-bottom: solid 1px rgb(169, 164, 149);
 
     z-index: 1;
     height: 8vh;
@@ -23,10 +22,4 @@
 .tth-img {
     height: 100%;
     width: 100%
-}
-
-.scrolled {
-    top: 0;
-    left: 0;
-    background: rgba(60,57,58,0.7);
 }
