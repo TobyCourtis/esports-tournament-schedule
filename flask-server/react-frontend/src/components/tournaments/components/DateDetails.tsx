@@ -1,5 +1,4 @@
 import React from "react";
-import {Days} from "../../../types/DateEnums";
 import "./DateDetails.css"
 
 interface IProps {
@@ -8,19 +7,19 @@ interface IProps {
 
 function DateDetails({date}: IProps) {
 
-    const dateLocale = date.toLocaleString()
+    const dateComponents = date.toString().split(" ")
 
     return (
         <div className={'date tournament-data-item'}>
             <div className={'date-item-div day-of-month-div'}>
-                <span className={'date-item'}>{dateLocale.substring(0, 2)}</span>
+                <span className={'date-item'}>{dateComponents[2]}</span>
             </div>
             <div className={'date-item-div day-of-week-div'}>
-                <span className={'date-item'}>{Days[date.getDay()]}</span>
+                <span className={'date-item'}>{dateComponents[0]}</span>
             </div>
             <div className={'date-item-div time-div'}>
                 {/* TODO comment back in when data is more rich */}
-                {/*<p className={'date-item'}>{dateLocale.substring(12, 17)}</p>*/}
+                {/*<p className={'date-item'}>{dateComponents[4].substring(0,5)}</p>*/}
                 <span className={'date-item'}>19:30</span>
             </div>
         </div>

@@ -1,0 +1,27 @@
+.header-div {
+    opacity: 0.5;
+    z-index: 1;
+    min-height: 7vh;
+    height: 7vh;
+    width: 100%;
+    background: #3c393a;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease-in;
+}
+
+.tth-img {
+    padding-left: 10px;
+    height: 70%;
+    width: auto;
+}
+
+.scrolled {
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #5f6365;
+}
