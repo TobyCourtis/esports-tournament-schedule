@@ -1,10 +1,10 @@
 .header-div {
-    opacity: 0.5;
+    position: fixed;
     z-index: 1;
     min-height: 7vh;
     height: 7vh;
     width: 100%;
-    background: #3c393a;
+    background: RGBA(95,99,101,0.5);
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -16,12 +16,4 @@
     padding-left: 10px;
     height: 70%;
     width: auto;
-}
-
-.scrolled {
-    opacity: 0.5;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #5f6365;
 }

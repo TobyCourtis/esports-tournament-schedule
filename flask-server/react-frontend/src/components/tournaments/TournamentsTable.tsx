@@ -18,7 +18,7 @@ function TournamentsTable(props: IProps) {
     }
 
     return (
-        <div>
+        <div className={'tournaments-table-div'}>
             {
                 months.map((month) => (
                     <CollapsableMonth monthName={month} tournaments={props.tournaments} key={month + 'collapsing-div'}/>
