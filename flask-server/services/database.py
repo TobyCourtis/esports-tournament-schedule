@@ -1,5 +1,5 @@
 import psycopg2
-from utils.parsers import tournament_to_json, player_to_json
+from .utils.parsers import tournament_to_json, player_to_json
 
 # TODO refactor the database service into a class DatabaseService
 postgresDBInfo = {'host': "localhost", 'port': 5432, 'database': "esportsdb", 'user': "postgres",
@@ -88,4 +88,4 @@ def get_tournaments_for_gamertag(gamertag):
 
 
 if __name__ == '__main__':
-    print(get_tournaments_for_gamertag('TOBYC'))
+    print(get_tournaments_for_gamertag('yeet'))
