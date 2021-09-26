@@ -1,5 +1,6 @@
 import './Header.css'
 import React, {useEffect} from "react";
+import logo from './tth-cal-logo.png'
 
 function Header() {
 
@@ -25,7 +26,7 @@ function Header() {
     return (
         <div className={navbarClasses.join(" ")}>
             <a href={'https://thetourneyhub.com'} className={'tth-img-link'}>
-                <img className={'tth-img'} src={'tth-cal-logo.png'} alt="tth-logo"/>
+                <img className={'tth-img'} src={logo} alt="tth-logo"/>
             </a>
         </div>
     )

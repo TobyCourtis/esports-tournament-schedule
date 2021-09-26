@@ -2,6 +2,9 @@ import React from "react";
 import {ITournament} from "../../types/TournamentTypes";
 import './TournamentsByMonth.css';
 import DateDetails from './components/DateDetails'
+import ytIcon from '../../imgs/youtube.png'
+import twitchIcon from '../../imgs/twitch.png'
+import trophyIcon from '../../imgs/trophy.png'
 
 interface IProps {
     tournaments: ITournament[]
@@ -23,7 +26,7 @@ function TournamentsByMonth({tournaments}: IProps) {
                                         <b className={'tournament-name'}>{tournament.Name}</b>
                                     </div>
                                     <div className='main-tournament-info-item prize-pool-div'>
-                                        <img className={'trophy-img'} src={'trophy.png'} alt="trophy"/>
+                                        <img className={'trophy-img'} src={trophyIcon} alt="trophy"/>
                                         <p>{tournament.PrizePool}</p>
                                     </div>
                                     <div className={'main-tournament-info-item tournament-format-div'}>
@@ -42,9 +45,9 @@ function TournamentsByMonth({tournaments}: IProps) {
                                         {
                                             // TODO change Stream icon depending on stream URL
                                             tournament.Name === 'HP Omen' ?
-                                                <img src={'youtube.png'} className={'stream-img'}
+                                                <img src={ytIcon} className={'stream-img'}
                                                      alt={'YT img'}/> :
-                                                <img src={'twitch.png'} className={'stream-img'}
+                                                <img src={twitchIcon} className={'stream-img'}
                                                      alt={'Twitch img'}/>
                                         }
                                     </a>
