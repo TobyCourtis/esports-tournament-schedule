@@ -1,9 +1,15 @@
 from flask import Flask, render_template, json, Response, send_from_directory
-from flask_cors import CORS  # comment this on deployment
+from flask_cors import CORS  # TODO comment this on production deployment
 from services import database as dbservice
+import os
 
 app = Flask(__name__, static_url_path='', static_folder='react-frontend/build')
 CORS(app)
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'tth-cal-logo.ico', mimetype='image/vnd.microsoft.icon')
 
 
 # HTML Route
@@ -80,12 +86,6 @@ def player(id_str):
 def tournament_by_gamertag(gamertag_str):
     data = dbservice.get_tournaments_for_gamertag(gamertag_str)
 
-    if len(data) == 0:
-        return Response(
-            f"Gamertag {gamertag_str} does not exist, please view a list of verified players here",
-            status=400,
-        )
-
     return app.response_class(
         response=json.dumps(data),
         status=200,
@@ -93,4 +93,4 @@ def tournament_by_gamertag(gamertag_str):
     )
 
 if __name__ == '__main__':
-    app.run("127.0.0.1", "5000")
+    app.run("127.0.0.1", 5000)
