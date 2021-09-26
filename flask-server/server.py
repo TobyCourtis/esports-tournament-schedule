@@ -18,7 +18,7 @@ def favicon():
 
 
 # API routes
-@app.route("/tournaments")
+@app.route("/api/tournaments")
 def tournaments():
     data = dbservice.get_tournaments()
     response = app.response_class(
@@ -29,7 +29,7 @@ def tournaments():
     return response
 
 
-@app.route("/tournament/<id_str>")
+@app.route("/api/tournament/<id_str>")
 def tournament(id_str):
     try:
         id = int(id_str)
@@ -47,7 +47,7 @@ def tournament(id_str):
     return response
 
 
-@app.route("/players")
+@app.route("/api/players")
 def players():
     data = dbservice.get_players()
     response = app.response_class(
@@ -58,7 +58,7 @@ def players():
     return response
 
 
-@app.route("/player/<id_str>")
+@app.route("/api/player/<id_str>")
 def player(id_str):
     try:
         id = int(id_str)
@@ -76,7 +76,7 @@ def player(id_str):
     return response
 
 
-@app.route("/tournaments/<gamertag_str>")
+@app.route("/api/tournaments/<gamertag_str>")
 def tournament_by_gamertag(gamertag_str):
     data = dbservice.get_tournaments_for_gamertag(gamertag_str)
 
