@@ -1,6 +1,6 @@
 import React from 'react';
 import {ITournament} from '../../types/TournamentTypes';
-import './TournamentTable.css'
+import './TournamentsTable.css'
 import {Months} from "../../types/DateEnums";
 import CollapsableMonth from "./CollapsableMonth";
 

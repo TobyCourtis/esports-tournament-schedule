@@ -1,6 +1,6 @@
-import TournamentsTable from "../components/tournaments/TournamentsTable";
-import {GetTournaments} from "../services/TournamentsClient";
-import {ITournament} from '../types/TournamentTypes';
+import TournamentsTable from "../../components/tournaments/TournamentsTable";
+import {GetTournaments} from "../../services/TournamentsClient";
+import {ITournament} from '../../types/TournamentTypes';
 import {useEffect, useState} from "react";
 
 function TournamentsPage() {

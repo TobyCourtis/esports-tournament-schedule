@@ -71,4 +71,4 @@ const tournamentsList: ITournament[] = [
 ];
 const blob = new Blob([JSON.stringify(tournamentsList, null, 2)], {type: 'application/json'});
 const init = {"status": 200, "statusText": "Success"};
-export const mockedTournamentEndpointResponse: Response = new Response(blob, init)
+export const mockedTournamentsEndpointResponse: Response = new Response(blob, init)

@@ -24,7 +24,7 @@ def player_to_json(player_results):
             'FirstName': i[1],
             'Surname': i[2],
             'GamerTag': i[3],
-            'Age': i[4],
+            'DOB': i[4],
             'Organisation': i[5],
             'OrganisationLink': i[6],
             'Stream': i[7],

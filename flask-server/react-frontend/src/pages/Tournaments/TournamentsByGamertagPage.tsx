@@ -1,6 +1,6 @@
-import TournamentsTable from "../components/tournaments/TournamentsTable";
-import {GetTournamentsByGamertag} from "../services/TournamentsClient";
-import {ITournament} from '../types/TournamentTypes';
+import TournamentsTable from "../../components/tournaments/TournamentsTable";
+import {GetTournamentsByGamertag} from "../../services/TournamentsClient";
+import {ITournament} from '../../types/TournamentTypes';
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 
