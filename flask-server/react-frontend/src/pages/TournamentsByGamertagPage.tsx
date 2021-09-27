@@ -25,8 +25,15 @@ function TournamentsByGamertagPage() {
         fetchTournaments();
     }, [gamertag, setTournaments]);
 
-    return tournaments.length > 0 ? <TournamentsTable tournaments={tournaments}/> :
-        <p>Oops, no tournaments found for that user!</p>
+    return (
+        <div>
+            <h1 className={'gamertag-heading'}>{gamertag}</h1>
+            {
+                tournaments.length > 0 ? <TournamentsTable tournaments={tournaments}/> :
+                    <p>Oops, no tournaments found for that user!</p>
+            }
+        </div>
+    )
 }
 
 export default TournamentsByGamertagPage;
