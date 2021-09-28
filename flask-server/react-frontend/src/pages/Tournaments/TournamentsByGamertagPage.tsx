@@ -5,6 +5,7 @@ import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import {IPlayer} from "../../types/PlayerTypes";
 import {GetPlayerByGamertag} from "../../services/PlayersClient";
+import './TournamentsByGamertagPage.css'
 
 
 interface IParamTypes {
@@ -38,7 +39,12 @@ function TournamentsByGamertagPage() {
 
     return (
         <div>
-            <h1 className={'gamertag-heading'}>{player ? player.GamerTag : gamertag}</h1>
+            {player ?
+                <div className={'player-info-div'}>
+                    <img src={player.Image} className={'player-image'} />
+                    <h1 className={'player-gamertag-heading'}>{player.GamerTag}</h1>
+                </div> : null
+            }
             {
                 tournaments.length > 0 ? <TournamentsTable tournaments={tournaments}/> :
                     <p>Oops, no tournaments found for that user!</p>
