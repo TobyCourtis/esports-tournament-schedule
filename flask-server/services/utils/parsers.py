@@ -1,4 +1,4 @@
-def tournament_to_json(tournament_results):
+def tournaments_to_json(tournament_results):
     out = []
     for i in tournament_results:
         out.append({
@@ -16,7 +16,7 @@ def tournament_to_json(tournament_results):
     return out
 
 
-def player_to_json(player_results):
+def players_to_json(player_results):
     out = []
     for i in player_results:
         out.append({

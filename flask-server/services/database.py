@@ -1,5 +1,5 @@
 import psycopg2
-from .utils.parsers import tournament_to_json, player_to_json
+from .utils.parsers import tournaments_to_json, players_to_json
 
 # TODO refactor the database service into a class DatabaseService
 postgresDBInfo = {'host': "localhost", 'port': 5432, 'database': "esportsdb", 'user': "postgres",
@@ -15,7 +15,7 @@ def get_tournament_by_id(id):
     cur.execute(query)
     query_results = cur.fetchall()
 
-    results_dict = tournament_to_json(query_results)
+    results_dict = tournaments_to_json(query_results)
     cur.close()
     conn.close()
     return results_dict
@@ -29,7 +29,7 @@ def get_tournaments():
     cur.execute("""SELECT * FROM tournaments;""")
     query_results = cur.fetchall()
 
-    results_dict = tournament_to_json(query_results)
+    results_dict = tournaments_to_json(query_results)
     cur.close()
     conn.close()
     return results_dict
@@ -44,7 +44,7 @@ def get_players():
     query_results = cur.fetchall()
 
     # tuple to dictionary
-    results_dict = player_to_json(query_results)
+    results_dict = players_to_json(query_results)
     cur.close()
     conn.close()
     return results_dict
@@ -59,7 +59,21 @@ def get_player_by_id(id):
     query_results = cur.fetchall()
 
     # tuple to dictionary
-    results_dict = player_to_json(query_results)
+    results_dict = players_to_json(query_results)
+    cur.close()
+    conn.close()
+    return results_dict
+
+def get_player_by_gamertag(gamertag):
+    conn = psycopg2.connect(**postgresDBInfo)
+    cur = conn.cursor()
+
+    query = """SELECT * FROM players WHERE gamertag iLIKE '%{0}%';""".format(gamertag)
+    cur.execute(query)
+    query_results = cur.fetchall()
+
+    # tuple to dictionary
+    results_dict = players_to_json(query_results)
     cur.close()
     conn.close()
     return results_dict
@@ -81,7 +95,7 @@ def get_tournaments_for_gamertag(gamertag):
     cur.execute(query)
     query_results = cur.fetchall()
 
-    results_dict = tournament_to_json(query_results)
+    results_dict = tournaments_to_json(query_results)
     cur.close()
     conn.close()
     return results_dict

@@ -21,7 +21,7 @@ def favicon():
 @app.route("/api/tournaments")
 def tournaments():
     data = dbservice.get_tournaments()
-    response = app.response_class(
+    response = Response(
         response=json.dumps(data),
         status=200,
         mimetype='application/json'
@@ -39,7 +39,7 @@ def tournament(id_str):
             status=400,
         )
     data = dbservice.get_tournament_by_id(id)
-    response = app.response_class(
+    response = Response(
         response=json.dumps(data),
         status=200,
         mimetype='application/json'
@@ -50,7 +50,7 @@ def tournament(id_str):
 @app.route("/api/players")
 def players():
     data = dbservice.get_players()
-    response = app.response_class(
+    response = Response(
         response=json.dumps(data),
         status=200,
         mimetype='application/json'
@@ -58,7 +58,7 @@ def players():
     return response
 
 
-@app.route("/api/player/<id_str>")
+@app.route("/api/player/id/<id_str>")
 def player(id_str):
     try:
         id = int(id_str)
@@ -68,7 +68,7 @@ def player(id_str):
             status=400,
         )
     data = dbservice.get_player_by_id(id)
-    response = app.response_class(
+    response = Response(
         response=json.dumps(data),
         status=200,
         mimetype='application/json'
@@ -76,11 +76,27 @@ def player(id_str):
     return response
 
 
+@app.route("/api/player/<gamertag>")
+def player_by_gamertag(gamertag):
+    data = dbservice.get_player_by_gamertag(gamertag)
+    if len(data) == 0:
+        return Response(
+            "Player not found",
+            status=400,
+        )
+
+    return Response(
+        response=json.dumps(data[0]),
+        status=200,
+        mimetype='application/json'
+    )
+
+
 @app.route("/api/tournaments/<gamertag_str>")
 def tournament_by_gamertag(gamertag_str):
     data = dbservice.get_tournaments_for_gamertag(gamertag_str)
 
-    return app.response_class(
+    return Response(
         response=json.dumps(data),
         status=200,
         mimetype='application/json'
