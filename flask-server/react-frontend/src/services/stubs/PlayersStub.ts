@@ -45,6 +45,25 @@ const playerList: IPlayer[] = [{
     "Stream": "https://twitch.tv/aydan",
     "Surname": "Courtis"
 }];
-const blob = new Blob([JSON.stringify(playerList, null, 2)], {type: 'application/json'});
-const init = {"status": 200, "statusText": "Success"};
-export const mockedPlayersEndpointResponse: Response = new Response(blob, init)
+
+
+function createBlob(input: any) {
+    return new Blob([JSON.stringify(input, null, 2)], {type: 'application/json'});
+}
+
+function createStatus(code: number, text: string) {
+    return {"status": code, "statusText": text};
+}
+
+
+export function mockGetPlayerByGamertag(gamertag: string): Response {
+    // case insensitive gamertag match
+    let player = playerList.find(player => player.GamerTag.toUpperCase() === gamertag.toUpperCase())
+    if (player) {
+        return new Response(createBlob(player), createStatus(200, 'success'))
+    }
+    return new Response(createBlob(null), createStatus(400, 'Could not find gamertag'))
+}
+
+export const mockedPlayersEndpointResponse: Response = new Response(createBlob(playerList),
+    createStatus(200, 'success'))

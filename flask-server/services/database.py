@@ -89,7 +89,7 @@ def get_tournaments_for_gamertag(gamertag):
         select * from tournaments t
         join player_tournaments pt on pt.tournamentID = t.tournamentID
         join players p on p.playerID = pt.playerID
-        where p.gamertag = '{0}';
+        where p.gamertag iLIKE '%{0}%';
             """.format(gamertag)
 
     cur.execute(query)
