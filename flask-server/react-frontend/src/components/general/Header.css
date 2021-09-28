@@ -1,11 +1,8 @@
-.header-div{
-    border-top: solid 1px rgb(169, 164, 149);
-    border-bottom: solid 1px rgb(169, 164, 149);
-
+.header-div {
     z-index: 1;
     height: 8vh;
     width: 100%;
-    background: rgba(60,57,58,0.3);
+    background: rgba(220, 205, 210, 0.3);
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
