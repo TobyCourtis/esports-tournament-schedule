@@ -20,7 +20,7 @@ export const GetPlayerByGamertag = async (gamertag: string): Promise<IPlayer | n
         console.log('Mocking /players endpoint response')
         data = mockGetPlayerByGamertag(gamertag)
     } else {
-        data = await fetch(`${process.env.REACT_APP_API_ENDPOINT}/players/${gamertag}`)
+        data = await fetch(`${process.env.REACT_APP_API_ENDPOINT}/player/${gamertag}`)
     }
 
     if (data.status === 400) {
