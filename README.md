@@ -6,11 +6,11 @@ Repo for TTH containing Python Flask Server and React/Node/TypeScript Frontend
 
 ---
 
-##Flask Server
+## Flask Server
 
 Located in flask-server/server.py
 
-###How to run
+### How to run
 
 To listen on port 5000
 
@@ -18,11 +18,11 @@ To listen on port 5000
 
 ---
 
-##React Frontend
+## React Frontend
 
 Located in flask-server/react-frontend
 
-###How to run
+### How to run
 
 ```
 cd flask-server/react-frontend
@@ -34,6 +34,6 @@ npm build # creates the static './build' dir
 
 --- 
 
-###TODO
+### TODO
  
 - Serve React/TypeScript frontend from Flask server not the node server
