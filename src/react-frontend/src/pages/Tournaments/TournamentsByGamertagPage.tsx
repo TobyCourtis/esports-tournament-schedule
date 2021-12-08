@@ -31,6 +31,8 @@ function TournamentsByGamertagPage() {
             console.log('Fetching player information for: ' + gamertag)
             let playerResponse = await GetPlayerByGamertag(gamertag)
             setPlayer(playerResponse)
+            console.log('IMG')
+            console.log(playerResponse?.Image)
         }
 
         fetchTournaments();
@@ -41,7 +43,7 @@ function TournamentsByGamertagPage() {
         <div>
             {player ?
                 <div className={'player-info-div'}>
-                    <img src={player.Image} className={'player-image'} />
+                    {player.Image ? <img src={player.Image} className={'player-image'} alt={'player-img'}/> : null}
                     <h1 className={'player-gamertag-heading'}>{player.GamerTag}</h1>
                 </div> : null
             }
