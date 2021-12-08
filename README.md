@@ -6,7 +6,7 @@ Repo for TTH containing Python Flask Server and React/Node/TypeScript Frontend
 
 ---
 
-##**Flask Server**
+##Flask Server
 
 Located in flask-server/server.py
 
@@ -18,7 +18,7 @@ To listen on port 5000
 
 ---
 
-##**React Frontend**
+##React Frontend
 
 Located in flask-server/react-frontend
 
