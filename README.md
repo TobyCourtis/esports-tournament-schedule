@@ -29,7 +29,17 @@ cd flask-server/react-frontend
 
 npm start # hosts on localhost:3000
 
-npm build # creates the static './build' dir 
+npm run build # creates the static './build' dir 
+```
+
+### How to run like production
+
+```
+cd flask-server/react-frontend
+
+npm run build # creates the static './build' dir
+
+serve -l 3000 # serves directory as Apache server would on port 3000 
 ```
 
 --- 
