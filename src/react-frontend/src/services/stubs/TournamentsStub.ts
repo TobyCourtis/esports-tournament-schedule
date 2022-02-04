@@ -1,8 +1,10 @@
 import {ITournament} from "../../types/TournamentTypes";
 
+const currentMonth: number = new Date().getMonth()
+
 const tournamentsList: ITournament[] = [
     {
-        "Date": new Date("Mon, 2 May 2021 00:00:00 GMT"),
+        "Date": new Date(new Date("Mon, 2 May 2021 00:00:00 GMT").setMonth(currentMonth)),
         "FormatLink": "https://twitch.com/tournaments/rivals/2v2/rules",
         "FormatName": "2v2",
         "ID": 1,
@@ -13,7 +15,7 @@ const tournamentsList: ITournament[] = [
         "PrizePool": "$100k",
         "Stream": "https://twitch.tv/twitch_rivals"
     }, {
-        "Date": new Date("Tue, 21 Jan 2021 00:00:00 GMT"),
+        "Date": new Date(new Date("Mon, 21 Feb 2021 00:00:00 GMT").setMonth(currentMonth)),
         "FormatLink": "https://hpomen.com/warzone/rules",
         "FormatName": "Custom Quads",
         "ID": 2,
@@ -24,7 +26,7 @@ const tournamentsList: ITournament[] = [
         "PrizePool": "$200k",
         "Stream": "https://twitch.tv/hp_omen"
     }, {
-        "Date": new Date("Mon, 23 Jan 2021 00:00:00 GMT"),
+        "Date": new Date(new Date("Mon, 23 Feb 2021 00:00:00 GMT").setMonth(currentMonth + 1)),
         "FormatLink": "https://faze.com/tournaments/rivals/2v2/rules",
         "FormatName": "2v2",
         "ID": 4,
@@ -35,7 +37,7 @@ const tournamentsList: ITournament[] = [
         "PrizePool": "$100k",
         "Stream": "https://faze.tv/faze_rivals"
     }, {
-        "Date": new Date("Tue, 24 Feb 2021 00:00:00 GMT"),
+        "Date": new Date(new Date("Mon, 24 Feb 2021 00:00:00 GMT").setMonth(currentMonth + 2)),
         "FormatLink": "https://optic.com/tournaments/rivals/2v2/rules",
         "FormatName": "2v2",
         "ID": 5,
@@ -46,7 +48,7 @@ const tournamentsList: ITournament[] = [
         "PrizePool": "$100k",
         "Stream": "https://optic.tv/optic_rivals"
     }, {
-        "Date": new Date("Wed, 20 Mar 2021 00:00:00 GMT"),
+        "Date": new Date(new Date("Mon, 20 Mar 2021 00:00:00 GMT").setMonth(currentMonth + 3)),
         "FormatLink": "https://twitch.com/tournaments/rivals/2v2/rules",
         "FormatName": "2v2 Kill Race",
         "ID": 6,
@@ -57,7 +59,7 @@ const tournamentsList: ITournament[] = [
         "PrizePool": "$500k",
         "Stream": "https://twitch.tv/twitch_rivals"
     }, {
-        "Date": new Date("Wed, 22 Apr 2021 00:00:00 GMT"),
+        "Date": new Date(new Date("Mon, 22 Apr 2021 00:00:00 GMT").setMonth(currentMonth + 4)),
         "FormatLink": "https://huskkers.com/tournaments/rivals/2v2/rules",
         "FormatName": "2v2",
         "ID": 3,
