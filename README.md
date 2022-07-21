@@ -42,7 +42,14 @@ npm run build # creates the static './build' dir
 serve -l 3000 # serves directory as Apache server would on port 3000 
 ```
 
---- 
+---
+
+### Installation
+
+Required on mac:
+`brew install postgresql`
+
+---
 
 ### TODO
  
