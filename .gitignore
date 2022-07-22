@@ -2,3 +2,4 @@
 /djangotestapp
 __pycache__/
 /tth-venv/
+/postgres-docker-db/data/
