@@ -2,7 +2,7 @@
 
 **Description**
 
-Repo for TTH containing Python Flask Server and React/Node/TypeScript Frontend
+Repo for TTH containing backend server(s) Node/Flask and React/Node/TypeScript Frontend
 
 ---
 
@@ -42,7 +42,14 @@ npm run build # creates the static './build' dir
 serve -l 3000 # serves directory as Apache server would on port 3000 
 ```
 
---- 
+---
+
+### Docker Postgres DB
+
+
+`cd postgres-docker-db && docker-compose up -d`
+
+---
 
 ### TODO
  
