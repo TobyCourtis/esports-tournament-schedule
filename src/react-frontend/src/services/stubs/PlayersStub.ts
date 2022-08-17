@@ -44,6 +44,90 @@ const playerList: IPlayer[] = [{
     "OrganisationLink": "https://faze.com",
     "Stream": "https://twitch.tv/aydan",
     "Surname": "Courtis"
+},
+{
+    "DOB": new Date("Fri, 25 Apr 1997 00:00:00 GMT"),
+    "Earnings": "$1k",
+    "FirstName": "Dan",
+    "GamerTag": "Dan",
+    "ID": 5,
+    "Image": "https://www.tobycourtis.com/wp-content/uploads/2020/02/Picture-Circle.png",
+    "Organisation": "Faze",
+    "OrganisationLink": "https://faze.com",
+    "Stream": "https://twitch.tv/aydan",
+    "Surname": "Clough"
+},
+{
+    "DOB": new Date("Fri, 25 Apr 1997 00:00:00 GMT"),
+    "Earnings": "$1k",
+    "FirstName": "Rahat",
+    "GamerTag": "Rahat",
+    "ID": 6,
+    "Image": "https://www.tobycourtis.com/wp-content/uploads/2020/02/Picture-Circle.png",
+    "Organisation": "Faze",
+    "OrganisationLink": "https://faze.com",
+    "Stream": "https://twitch.tv/aydan",
+    "Surname": "Choudhury"
+},
+{
+    "DOB": new Date("Fri, 25 Apr 1997 00:00:00 GMT"),
+    "Earnings": "$1k",
+    "FirstName": "Phil",
+    "GamerTag": "Phil",
+    "ID": 7,
+    "Image": "https://www.tobycourtis.com/wp-content/uploads/2020/02/Picture-Circle.png",
+    "Organisation": "Faze",
+    "OrganisationLink": "https://faze.com",
+    "Stream": "https://twitch.tv/aydan",
+    "Surname": "Hodgson"
+},
+{
+    "DOB": new Date("Fri, 25 Apr 1997 00:00:00 GMT"),
+    "Earnings": "$1k",
+    "FirstName": "John",
+    "GamerTag": "John",
+    "ID": 7,
+    "Image": "https://www.tobycourtis.com/wp-content/uploads/2020/02/Picture-Circle.png",
+    "Organisation": "Faze",
+    "OrganisationLink": "https://faze.com",
+    "Stream": "https://twitch.tv/aydan",
+    "Surname": "Hodgson"
+},
+{
+    "DOB": new Date("Fri, 25 Apr 1997 00:00:00 GMT"),
+    "Earnings": "$1k",
+    "FirstName": "Nigel",
+    "GamerTag": "Nigel",
+    "ID": 7,
+    "Image": "https://www.tobycourtis.com/wp-content/uploads/2020/02/Picture-Circle.png",
+    "Organisation": "Faze",
+    "OrganisationLink": "https://faze.com",
+    "Stream": "https://twitch.tv/aydan",
+    "Surname": "Hodgson"
+},
+{
+    "DOB": new Date("Fri, 25 Apr 1997 00:00:00 GMT"),
+    "Earnings": "$1k",
+    "FirstName": "Tristan",
+    "GamerTag": "Tristan",
+    "ID": 7,
+    "Image": "https://www.tobycourtis.com/wp-content/uploads/2020/02/Picture-Circle.png",
+    "Organisation": "Faze",
+    "OrganisationLink": "https://faze.com",
+    "Stream": "https://twitch.tv/aydan",
+    "Surname": "Hodgson"
+},
+{
+    "DOB": new Date("Fri, 25 Apr 1997 00:00:00 GMT"),
+    "Earnings": "$1k",
+    "FirstName": "Tim",
+    "GamerTag": "Tim",
+    "ID": 7,
+    "Image": "https://www.tobycourtis.com/wp-content/uploads/2020/02/Picture-Circle.png",
+    "Organisation": "Faze",
+    "OrganisationLink": "https://faze.com",
+    "Stream": "https://twitch.tv/aydan",
+    "Surname": "Hodgson"
 }];
 
 
