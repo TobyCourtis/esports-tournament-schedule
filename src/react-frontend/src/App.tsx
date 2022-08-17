@@ -19,7 +19,7 @@ function App() {
                 <Switch>
                     <Route exact path="/" component={TournamentsPage}/>
                     <Route path="/players" component={PlayersPage}/>
-                    <Route path="/:gamertag" children={<TournamentsByGamertagPage/>}/>
+                    <Route path="/gamertag/:gamertag" children={<TournamentsByGamertagPage/>}/>
                     <Route path='*' exact={true} component={PageNotFound}/>
                 </Switch>
             </div>
