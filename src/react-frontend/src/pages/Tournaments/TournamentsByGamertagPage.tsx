@@ -28,14 +28,14 @@ function TournamentsByGamertagPage() {
         }
 
         async function fetchPlayer() {
-            console.log('Fetching player information for: ' + gamertag)
             let playerResponse = await GetPlayerByGamertag(gamertag)
             setPlayer(playerResponse)
-            console.log('IMG')
-            console.log(playerResponse?.Image)
+
+            if (playerResponse) {
+                fetchTournaments()
+            }
         }
 
-        fetchTournaments();
         fetchPlayer();
     }, [gamertag, setTournaments]);
 
@@ -48,7 +48,7 @@ function TournamentsByGamertagPage() {
                 </div> : null
             }
             {
-                tournaments.length > 0 ? <TournamentsTable tournaments={tournaments}/> :
+                tournaments.length > 0 && player ? <TournamentsTable tournaments={tournaments}/> :
                     <p>Oops, no tournaments found for that user!</p>
             }
         </div>
