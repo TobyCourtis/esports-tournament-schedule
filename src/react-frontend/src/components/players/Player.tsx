@@ -1,6 +1,7 @@
 import {IPlayer} from "../../types/PlayerTypes";
 import {Grid} from '@material-ui/core';
 import './Player.css'
+import arrow from './arrow.png';
 
 export default function Player(player: IPlayer) {
     return (
@@ -8,6 +9,7 @@ export default function Player(player: IPlayer) {
             <div className={'player-outer-div'}>
                 <div className={'player-inner-div'}>
                     <h3>{player.FirstName}</h3>
+                    <p><img className={'arrow-img'} src={arrow} alt={'arrow-img'}/></p>
                 </div>
                 <div className={'overlay-div'}>
                     <img src={'https://d21is3bk1bus90.cloudfront.net/images/roster-player-card-bg.png'}
