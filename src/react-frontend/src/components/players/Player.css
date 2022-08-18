@@ -57,11 +57,6 @@
     margin-top: 0.5em;
 }
 
-.player-image{
-    height: 70%;
-    width: auto;
-}
-
 .overlay-div{
     position: absolute;
 
@@ -102,3 +97,19 @@ hr.solid {
     margin-bottom: 50%;
     z-index: 8;
 }
+
+.profile-picture{
+    /*position: absolute;*/
+    height: 70%;
+    aspect-ratio: 1 / 1;
+
+    border: 0;
+    position: absolute;
+    top: 15%;
+    right: 12%;
+    z-index: 9;
+}
+
+/*.player-inner-div img {*/
+/*    position: absolute;*/
+/*}*/

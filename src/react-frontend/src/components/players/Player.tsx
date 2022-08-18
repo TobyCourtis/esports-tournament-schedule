@@ -2,6 +2,7 @@ import {IPlayer} from "../../types/PlayerTypes";
 import {Grid} from '@material-ui/core';
 import './Player.css'
 import arrow from './arrow.png';
+import playerPic from './aydan.png';
 
 export default function Player(player: IPlayer) {
     return (
@@ -15,6 +16,9 @@ export default function Player(player: IPlayer) {
                     <img src={'https://d21is3bk1bus90.cloudfront.net/images/roster-player-card-bg.png'}
                          className={'overlay-image'} alt={'overlay'}/>
                 </div>
+                {/*TODO change to player.Image when date is there */}
+                <img src={playerPic}
+                     className={'profile-picture'} alt={'profile-pic'}/>
             </div>
         </Grid>
     );
