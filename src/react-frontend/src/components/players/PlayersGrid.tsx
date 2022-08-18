@@ -23,20 +23,14 @@ function PlayersGrid({players}: IProps) {
                     {
                         players
                             .filter(p => featuredPlayers.includes(p.GamerTag))
-                            .map((player: IPlayer) => (
-                            <Grid item xs={4} spacing={3} md={4} className={"player-grid-item"}>
-                                <Player {...player}/>
-                            </Grid>))
+                            .map((player: IPlayer) => (<Player {...player}/>))
                     }
                 </Grid>
                 <hr className={'empty-break'} />
                 <h1 className={'headings'}>All</h1>
                 <Grid container spacing={3} zeroMinWidth>
                     {
-                        players.map((player: IPlayer) => (
-                        <Grid item xs={4} spacing={3} md={4} className={"player-grid-item"}>
-                            <Player {...player}/>
-                        </Grid>))
+                        players.map((player: IPlayer) => (<Player {...player}/>))
                     }
                 </Grid>
             </div>

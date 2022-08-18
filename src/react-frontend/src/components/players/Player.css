@@ -17,14 +17,14 @@
     bottom: 0;
     margin: auto;
 
-    height: 25vh;
+    height: 21vh;
     /*background: lightblue;*/
     padding: 0;
     position: relative;
 }
 
 .player-inner-div{
-    background: lightgrey;
+    background: white;
     position: absolute; /*Can also be `fixed`*/
     left: 0;
     right: 0;
@@ -36,15 +36,37 @@
     max-height: 100%;
     overflow: auto;
     aspect-ratio : 1 / 1;
+    border-radius: 5px;
 }
 .player-inner-div p{
     color: darkslategray;
     font-size: 14px;
 }
 
+.player-inner-div h3{
+    float: left;
+    margin-left: 0.5em;
+    margin-top: 0.2em;
+}
+
 .player-image{
     height: 70%;
     width: auto;
+}
+
+.overlay-div{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+}
+
+.overlay-image{
+    width: 115%;
+    height: auto;
+
+    /*position: absolute;*/
+    transform: translateX(-5%) translateY(1%);
 }
 
 hr.solid {

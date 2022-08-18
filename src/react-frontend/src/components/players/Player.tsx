@@ -1,15 +1,19 @@
 import {IPlayer} from "../../types/PlayerTypes";
+import {Grid} from '@material-ui/core';
 import './Player.css'
 
 export default function Player(player: IPlayer) {
     return (
-        <div className={'player-outer-div'}>
-            <div className={'player-inner-div'}>
-                <img src={'https://www.tobycourtis.com/wp-content/uploads/2020/02/Picture-Circle.png'}
-                     className={'player-image'} alt={'player'}/>
-                <p>{player.FirstName}</p>
-                <p>{player.Organisation} - {player.Earnings}</p>
+        <Grid item xs={4} spacing={3} md={4} className={"player-grid-item"}>
+            <div className={'player-outer-div'}>
+                <div className={'player-inner-div'}>
+                    <h3>{player.FirstName}</h3>
+                </div>
+                <div className={'overlay-div'}>
+                    <img src={'https://d21is3bk1bus90.cloudfront.net/images/roster-player-card-bg.png'}
+                         className={'overlay-image'} alt={'overlay'}/>
+                </div>
             </div>
-        </div>
+        </Grid>
     );
 }
