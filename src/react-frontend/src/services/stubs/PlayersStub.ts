@@ -128,6 +128,30 @@ const playerList: IPlayer[] = [{
     "OrganisationLink": "https://faze.com",
     "Stream": "https://twitch.tv/aydan",
     "Surname": "Hodgson"
+},
+{
+    "DOB": new Date("Fri, 25 Apr 1997 00:00:00 GMT"),
+    "Earnings": "$1k",
+    "FirstName": "Max",
+    "GamerTag": "Mzizli",
+    "ID": 7,
+    "Image": "https://www.tobycourtis.com/wp-content/uploads/2020/02/Picture-Circle.png",
+    "Organisation": "Faze",
+    "OrganisationLink": "https://faze.com",
+    "Stream": "https://twitch.tv/aydan",
+    "Surname": "Hodgson"
+},
+{
+    "DOB": new Date("Fri, 25 Apr 1997 00:00:00 GMT"),
+    "Earnings": "$1k",
+    "FirstName": "Chargey",
+    "GamerTag": "Chargey4",
+    "ID": 7,
+    "Image": "https://www.tobycourtis.com/wp-content/uploads/2020/02/Picture-Circle.png",
+    "Organisation": "Faze",
+    "OrganisationLink": "https://faze.com",
+    "Stream": "https://twitch.tv/aydan",
+    "Surname": "Hodgson"
 }];
 
 
