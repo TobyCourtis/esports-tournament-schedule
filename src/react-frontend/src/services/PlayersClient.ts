@@ -5,7 +5,7 @@ export const GetPlayers = async (): Promise<IPlayer[]> => {
     var data: Response | null;
     if (process.env.REACT_APP_STUBBED_RESPONSE === 'true') {
         console.log('Mocking /players endpoint response')
-        data = mockedPlayersEndpointResponse
+        data = mockedPlayersEndpointResponse.clone()
     } else {
         data = await fetch(`${process.env.REACT_APP_API_ENDPOINT}/players`)
     }
@@ -18,7 +18,7 @@ export const GetPlayerByGamertag = async (gamertag: string): Promise<IPlayer | n
     var data: Response | null;
     if (process.env.REACT_APP_STUBBED_RESPONSE === 'true') {
         console.log('Mocking /players endpoint response')
-        data = mockGetPlayerByGamertag(gamertag)
+        data = mockGetPlayerByGamertag(gamertag).clone()
     } else {
         data = await fetch(`${process.env.REACT_APP_API_ENDPOINT}/player/${gamertag}`)
     }
