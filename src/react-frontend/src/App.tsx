@@ -12,9 +12,7 @@ function App() {
     return (
         <Router>
             <div className="App">
-                {/*TODO add Link(s) to header*/}
                 <Header/>
-
 
                 <Switch>
                     <Route exact path="/" component={TournamentsPage}/>
