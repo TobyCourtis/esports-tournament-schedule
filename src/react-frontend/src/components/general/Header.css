@@ -26,7 +26,23 @@
     font-size: 1.5em;
 }
 
-.header-div p:hover {
-    color: pink;
-    text-underline: white;
+
+.header-div p{
+    position: relative;
+}
+
+.header-div p::after{
+    position: absolute;
+    content: "";
+    background: white;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    transition: 300ms ease-in-out;
+}
+
+.header-div p:hover::after {
+    width: 100%;
+    left: 0;
 }
