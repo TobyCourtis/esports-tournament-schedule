@@ -1,6 +1,7 @@
 import './Header.css'
 import React, {useEffect} from "react";
 import logo from './tth-cal-logo.png'
+import {useHistory} from "react-router-dom";
 
 function Header() {
 
@@ -23,10 +24,31 @@ function Header() {
         navbarClasses.push('scrolled');
     }
 
+    const history = useHistory();
+
+    const redirect = (path: string = "") => {
+        if (!path) {
+            path = ""
+        }
+        history.push("/" + path);
+    }
+
     return (
         <div className={navbarClasses.join(" ")}>
-            <a href={'https://thetourneyhub.com'} className={'tth-img-link'}>
+            <a onClick={() => redirect()} className={'tth-img-link'}>
                 <img className={'tth-img'} src={logo} alt="tth-logo"/>
+            </a>
+            <a onClick={() => redirect()}>
+                <p>TheTourneyHub</p>
+            </a>
+            <a onClick={() => redirect()}>
+                <p>Calendar</p>
+            </a>
+            <a onClick={() => redirect('teams')}>
+                <p>Teams</p>
+            </a>
+            <a onClick={() => redirect('players')}>
+                <p>Players</p>
             </a>
         </div>
     )
