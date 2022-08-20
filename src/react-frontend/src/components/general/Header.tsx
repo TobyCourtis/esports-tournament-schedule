@@ -35,21 +35,36 @@ function Header() {
 
     return (
         <div className={navbarClasses.join(" ")}>
-            <a onClick={() => redirect()} className={'tth-img-link'}>
-                <img className={'tth-img'} src={logo} alt="tth-logo"/>
-            </a>
-            <a onClick={() => redirect()}>
-                <p>TheTourneyHub</p>
-            </a>
-            <a onClick={() => redirect()}>
-                <p>Calendar</p>
-            </a>
-            <a onClick={() => redirect('teams')}>
-                <p>Teams</p>
-            </a>
-            <a onClick={() => redirect('players')}>
-                <p>Players</p>
-            </a>
+                <ul className="header-list">
+                    <li>
+                        <a onClick={() => redirect()}
+                           className={'tth-img-link'}
+                            id={'tth-img-link'}>
+                            <img className={'tth-img'} src={logo} alt="tth-logo" id={'tth-img'}/>
+                        </a>
+                    </li>
+                    <li>
+                        <a onClick={() => redirect()}>
+                            <p>TheTourneyHub</p>
+                        </a>
+                    </li>
+
+                    <li className={'right'}>
+                        <a onClick={() => redirect('players')}>
+                            <p>Players</p>
+                        </a>
+                    </li>
+                    <li className={'right'}>
+                        <a onClick={() => redirect('teams')}>
+                            <p>Teams</p>
+                        </a>
+                    </li>
+                    <li className={'right'}>
+                        <a onClick={() => redirect()}>
+                            <p>Calendar</p>
+                        </a>
+                    </li>
+                </ul>
         </div>
     )
 }
