@@ -3,7 +3,7 @@ p {
 }
 
 .tournaments-outer-div {
-    padding: 0px 5vw;
+    padding: 0 8vw;
     height: 20vh;
 }
 
@@ -11,7 +11,7 @@ p {
     background-color: #333333;
     height: 100%;
     border: 2px solid rgba(7, 4, 4, 0.57);
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .tournaments-inner-div:hover {
