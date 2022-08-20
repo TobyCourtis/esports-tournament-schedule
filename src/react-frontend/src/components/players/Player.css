@@ -2,12 +2,14 @@
 }
 
 .players-table-inner-div{
-    padding: 10vh 10vw 1vh;
+    padding: 5vh 10vw 1vh;
 }
 
-.player-grid-item{
+#player-grid-item{
     /*DEBUG*/
     /*background: grey;*/
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
 }
 
 .player-outer-div{
@@ -41,20 +43,40 @@
     overflow: hidden;
 }
 
-.player-inner-div p{
+#arrow-img{
     color: darkslategray;
     font-size: 20px;
 
     bottom: 0;
     float: left;
     position: absolute;
-
 }
 
-.player-inner-div h3{
+#arrow-img:hover {
+    cursor: pointer;
+}
+
+.player-inner-div p{
     float: left;
-    margin-left: 0.5em;
     margin-top: 0.5em;
+    z-index: 100;
+    color: black;
+}
+
+#firstname, #surname{
+    font-weight: 300;
+    font-style: normal;
+}
+
+#firstname{
+    margin-left: 1em;
+}
+
+#gamertag{
+    font-weight: 800;
+    font-style: normal;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
 }
 
 .overlay-div{
@@ -94,18 +116,27 @@ hr.solid {
     z-index: 8;
 }
 
+
+
+.org-picture{
+    height: 24%;
+    aspect-ratio: 1 / 0.8;
+
+    border: 0;
+    position: absolute;
+    top: 45%;
+    filter: grayscale(60%);
+    left: 10%;
+    z-index: 10;
+}
+
 .profile-picture{
-    /*position: absolute;*/
     height: 70%;
     aspect-ratio: 1 / 1;
 
     border: 0;
     position: absolute;
     top: 15%;
-    right: 12%;
+    right: 7%;
     z-index: 9;
 }
-
-/*.player-inner-div img {*/
-/*    position: absolute;*/
-/*}*/
