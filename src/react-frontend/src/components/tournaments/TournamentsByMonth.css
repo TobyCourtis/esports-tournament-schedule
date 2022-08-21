@@ -8,14 +8,14 @@ p {
 }
 
 .tournaments-inner-div {
-    background-color: #333333;
+    background-color: #3c3f49;
     height: 100%;
-    border: 2px solid rgba(7, 4, 4, 0.57);
+    border: 2px solid rgb(33 33 35);
     border-radius: 0;
 }
 
 .tournaments-inner-div:hover {
-    background-color: #423f3f;
+    background-color: #515466;
 }
 
 
