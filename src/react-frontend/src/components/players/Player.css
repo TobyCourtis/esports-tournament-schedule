@@ -2,7 +2,7 @@
 }
 
 .players-table-inner-div{
-    padding: 5vh 10vw 1vh;
+    padding: 3vh 10vw 1vh;
 }
 
 #player-grid-item{
@@ -141,4 +141,20 @@ hr.solid {
     z-index: 9;
 
     filter: grayscale(100%);
+}
+
+.players-total{
+    color: ivory;
+    display: inline-block;
+}
+
+.player-length{
+    margin-right: 1em;
+    margin-left: 1em;
+    color: red;
+}
+
+.players-total-div{
+    margin-top: 3vh;
+    font-size: 1.5em;
 }
