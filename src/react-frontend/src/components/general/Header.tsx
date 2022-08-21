@@ -35,36 +35,34 @@ function Header() {
 
     return (
         <div className={navbarClasses.join(" ")}>
-                <ul className="header-list">
-                    <li>
-                        <a onClick={() => redirect()}
-                           className={'tth-img-link'}
-                            id={'tth-img-link'}>
-                            <img className={'tth-img'} src={logo} alt="tth-logo" id={'tth-img'}/>
-                        </a>
-                    </li>
-                    <li>
-                        <a onClick={() => redirect()}>
-                            <p>TheTourneyHub</p>
-                        </a>
-                    </li>
+            <ul className="header-list">
+                <li>
+                    <button onClick={() => redirect()} className={'tth-img-link'} id={'tth-img-link'}>
+                        <img className={'tth-img'} src={logo} alt="tth-logo" id={'tth-img'}/>
+                    </button>
+                </li>
+                <li>
+                    <button onClick={() => redirect()}>
+                        <p>TheTourneyHub</p>
+                    </button>
+                </li>
 
-                    <li className={'right'}>
-                        <a onClick={() => redirect('players')}>
-                            <p>Players</p>
-                        </a>
-                    </li>
-                    <li className={'right'}>
-                        <a onClick={() => redirect('teams')}>
-                            <p>Teams</p>
-                        </a>
-                    </li>
-                    <li className={'right'}>
-                        <a onClick={() => redirect()}>
-                            <p>Calendar</p>
-                        </a>
-                    </li>
-                </ul>
+                <li className={'right'}>
+                    <button onClick={() => redirect('players')}>
+                        <p>Players</p>
+                    </button>
+                </li>
+                <li className={'right'}>
+                    <button onClick={() => redirect('teams')}>
+                        <p>Teams</p>
+                    </button>
+                </li>
+                <li className={'right'}>
+                    <button onClick={() => redirect()}>
+                        <p>Calendar</p>
+                    </button>
+                </li>
+            </ul>
         </div>
     )
 }
