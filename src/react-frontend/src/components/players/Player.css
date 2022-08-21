@@ -139,4 +139,6 @@ hr.solid {
     top: 15%;
     right: 7%;
     z-index: 9;
+
+    filter: grayscale(100%);
 }

@@ -12,7 +12,7 @@ interface IProps {
 
 function PlayersGrid({players}: IProps) {
 
-    const featuredPlayers = ["TOBYC", "Aydan", "Rated"]
+    const featuredPlayers = ["Tommey", "Aydan", "Rated"]
 
     return (
         <div className={'players-table-outer-div'}>

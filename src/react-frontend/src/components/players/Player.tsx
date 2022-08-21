@@ -2,8 +2,8 @@ import {IPlayer} from "../../types/PlayerTypes";
 import {Grid} from '@material-ui/core';
 import './Player.css'
 import arrow from './arrow.png';
-import playerPic from './aydan.png';
 import orgPic from './faze.png';
+import fallbackImg from './wz-logo.png';
 import {useHistory} from "react-router-dom";
 
 function calculateFontSize(displayText: string) {
@@ -53,7 +53,9 @@ export default function Player(player: IPlayer) {
                 </div>
                 {/*TODO change to player.Image and org.image when data is final */}
                 <img src={orgPic} className={'org-picture'} alt={'org-picture'}/>
-                <img src={playerPic} className={'profile-picture'} alt={'profile-picture'}/>
+                <img src={player.Image ? player.Image : fallbackImg}
+                     className={'profile-picture'}
+                     alt={'profile-picture'}/>
             </div>
         </Grid>
     );
