@@ -1,6 +1,7 @@
 import './Header.css'
 import React, {useEffect} from "react";
 import logo from './tth-cal-logo.png'
+import {useHistory} from "react-router-dom";
 
 function Header() {
 
@@ -23,11 +24,47 @@ function Header() {
         navbarClasses.push('scrolled');
     }
 
+    const history = useHistory();
+
+    const redirect = (path: string = "") => {
+        if (!path) {
+            path = ""
+        }
+        history.push("/" + path);
+    }
+
     return (
         <div className={navbarClasses.join(" ")}>
-            <a href={'https://thetourneyhub.com'} className={'tth-img-link'}>
-                <img className={'tth-img'} src={logo} alt="tth-logo"/>
-            </a>
+                <ul className="header-list">
+                    <li>
+                        <a onClick={() => redirect()}
+                           className={'tth-img-link'}
+                            id={'tth-img-link'}>
+                            <img className={'tth-img'} src={logo} alt="tth-logo" id={'tth-img'}/>
+                        </a>
+                    </li>
+                    <li>
+                        <a onClick={() => redirect()}>
+                            <p>TheTourneyHub</p>
+                        </a>
+                    </li>
+
+                    <li className={'right'}>
+                        <a onClick={() => redirect('players')}>
+                            <p>Players</p>
+                        </a>
+                    </li>
+                    <li className={'right'}>
+                        <a onClick={() => redirect('teams')}>
+                            <p>Teams</p>
+                        </a>
+                    </li>
+                    <li className={'right'}>
+                        <a onClick={() => redirect()}>
+                            <p>Calendar</p>
+                        </a>
+                    </li>
+                </ul>
         </div>
     )
 }

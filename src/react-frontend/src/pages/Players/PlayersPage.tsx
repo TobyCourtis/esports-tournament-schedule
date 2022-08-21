@@ -1,23 +1,23 @@
 import {GetPlayers} from "../../services/PlayersClient";
 import {useEffect, useState} from "react";
 import {IPlayer} from "../../types/PlayerTypes";
-import PlayersTable from "../../components/players/PlayersTable";
+import PlayersGrid from "../../components/players/PlayersGrid";
 
 function PlayersPage() {
 
     const [players, setPlayers] = useState<IPlayer[]>([]);
 
     useEffect(() => {
-        async function fetchTournaments() {
+        async function fetchPlayers() {
             let response = await GetPlayers()
             setPlayers(response)
         }
 
-        fetchTournaments();
+        fetchPlayers();
     }, [setPlayers]);
 
     return players.length > 0 ?
-        <PlayersTable players={players}/> : <p>No players found</p>
+        <PlayersGrid players={players}/> : <p>No players found</p>
 }
 
 export default PlayersPage;

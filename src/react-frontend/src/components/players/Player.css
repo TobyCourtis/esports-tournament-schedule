@@ -1,0 +1,160 @@
+.players-table-outer-div{
+}
+
+.players-table-inner-div{
+    padding: 3vh 10vw 1vh;
+}
+
+#player-grid-item{
+    /*DEBUG*/
+    /*background: grey;*/
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+}
+
+.player-outer-div{
+    width: 80%;
+    aspect-ratio: 4 / 3;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+
+    /* DEBUG */
+    /*background: lightblue;*/
+    padding: 0;
+    position: relative;
+}
+
+.player-inner-div{
+    background: #fff;
+
+
+    height: 100%;
+    width: 87%;
+
+    border-radius: 5px;
+    margin: 0 auto;
+
+    z-index: 5;
+
+    overflow: hidden;
+}
+
+#arrow-img{
+    color: darkslategray;
+    font-size: 20px;
+
+    bottom: 0;
+    float: left;
+    position: absolute;
+}
+
+#arrow-img:hover {
+    cursor: pointer;
+}
+
+.player-inner-div p{
+    float: left;
+    margin-top: 0.5em;
+    z-index: 100;
+    color: black;
+}
+
+#firstname, #surname{
+    font-weight: 300;
+    font-style: normal;
+}
+
+#firstname{
+    margin-left: 1em;
+}
+
+#gamertag{
+    font-weight: 800;
+    font-style: normal;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+.overlay-div{
+    position: absolute;
+
+    width: 100%;
+    height: 78%;
+
+    bottom: 0;
+    z-index: 6;
+    transform: translateY(1px);
+}
+
+.overlay-image{
+    width: 100%;
+    height: 100%;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+    margin: 2em;
+}
+
+.headings{
+    float: right;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-right: 1em;
+}
+
+.arrow-img{
+    height: 1vw;
+    aspect-ratio: 1 / 1;
+
+    margin-left: 50%;
+    margin-bottom: 50%;
+    z-index: 8;
+}
+
+
+
+.org-picture{
+    height: 24%;
+    aspect-ratio: 1 / 0.8;
+
+    border: 0;
+    position: absolute;
+    top: 45%;
+    filter: grayscale(60%);
+    left: 10%;
+    z-index: 10;
+}
+
+.profile-picture{
+    height: 70%;
+    aspect-ratio: 1 / 1;
+
+    border: 0;
+    position: absolute;
+    top: 15%;
+    right: 7%;
+    z-index: 9;
+
+    filter: grayscale(100%);
+}
+
+.players-total{
+    color: ivory;
+    display: inline-block;
+}
+
+.player-length{
+    margin-right: 1em;
+    margin-left: 1em;
+    color: red;
+}
+
+.players-total-div{
+    margin-top: 3vh;
+    font-size: 1.5em;
+}
