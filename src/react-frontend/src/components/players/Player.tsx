@@ -44,7 +44,7 @@ export default function Player(player: IPlayer) {
                     <p style={style} id={'gamertag'}>{'"' + player.GamerTag + '" '}</p>
                     <p style={style} id={'surname'}>{player.Surname}</p>
                     <p id={'arrow-img'} onClick={() => redirect(player.GamerTag)}>
-                            <img className={'arrow-img'} src={arrow} alt={'arrow-img'}/>
+                            <img className={'arrow-img'} src={arrow} alt={'arrow'}/>
                     </p>
                 </div>
                 <div className={'overlay-div'}>
@@ -52,10 +52,10 @@ export default function Player(player: IPlayer) {
                          className={'overlay-image'} alt={'overlay'}/>
                 </div>
                 {/*TODO change to player.Image and org.image when data is final */}
-                <img src={orgPic} className={'org-picture'} alt={'org-picture'}/>
+                <img src={orgPic} className={'org-picture'} alt={'org'}/>
                 <img src={player.Image ? player.Image : fallbackImg}
                      className={'profile-picture'}
-                     alt={'profile-picture'}/>
+                     alt={'profile'}/>
             </div>
         </Grid>
     );
