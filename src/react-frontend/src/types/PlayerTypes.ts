@@ -4,9 +4,9 @@ export interface IPlayer {
     Surname: string,
     GamerTag: string,
     DOB: Date,
-    Organisation: string,
-    OrganisationLink: string,
+    teamID: number | null,
     Stream: string,
     Image: string,
-    Earnings: string
+    Earnings: string,
+    Country: string
 }
