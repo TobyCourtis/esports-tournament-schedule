@@ -3,7 +3,6 @@ import {Grid} from '@material-ui/core';
 import './Player.css'
 import arrow from './arrow.png';
 import orgPic from './faze.png';
-import fallbackImg from './wz-logo.png';
 import {useHistory} from "react-router-dom";
 
 function calculateFontSize(displayText: string) {
@@ -23,6 +22,8 @@ function calculateFontSize(displayText: string) {
 }
 
 export default function Player(player: IPlayer) {
+
+    const fallbackImg = 'https://static.wikia.nocookie.net/cod_esports_gamepedia_en/images/1/1d/Unknown_Infobox_Image_-_Player.png'
 
     let style = {
         fontSize: "1.3em"
