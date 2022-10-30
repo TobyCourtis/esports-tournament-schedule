@@ -39,7 +39,7 @@ Change stubbed response to false for front-end:
 
 ```
 src/react-frontend/.env
-REACT_APP_STUBBED_RESPONSE=false`
+REACT_APP_STUBBED_RESPONSE=false
 ```
 
 Run backend server and react front-end:
