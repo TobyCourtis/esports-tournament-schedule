@@ -2,15 +2,15 @@ import {IPlayer} from "../../types/PlayerTypes";
 
 const playerList: IPlayer[] = [
     {
-        "DOB": new Date("07 Feb 2000 00:00:00 GMT"),
-        "Earnings": "$215k",
-        "FirstName": "Liam",
-        "GamerTag": "Jukeyz",
         "ID": 1,
-        "Image": "https://static.wikia.nocookie.net/cod_esports_gamepedia_en/images/5/56/Jukeyz_2020.png",
+        "FirstName": "Liam",
+        "Surname": "James",
+        "GamerTag": "Jukeyz",
+        "DOB": new Date("07 Feb 2000 00:00:00 GMT"),
         "teamID": 6,
         "Stream": "https://www.twitch.tv/jukeyz",
-        "Surname": "James",
+        "Image": "https://static.wikia.nocookie.net/cod_esports_gamepedia_en/images/5/56/Jukeyz_2020.png",
+        "Earnings": "$215k",
         "Country": "England"
     },
     {
