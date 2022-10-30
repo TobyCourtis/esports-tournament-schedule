@@ -1,14 +1,13 @@
 # The Tourney Hub (TTH)
 
-**Description**
 
-Repo for TTH containing backend server(s) Node/Flask and React/Node/TypeScript Frontend
+Repo for TTH containing backend server(s) Node/Flask and React/Node/TypeScript front-end
 
 ---
 
-## Flask Server
+## Flask Backend
 
-Located in flask-server/server.py
+Located in src/python-backend/server.py
 
 ### How to run
 
@@ -18,39 +17,49 @@ To listen on port 5000
 
 ---
 
-## React Frontend
+## React front-end
 
-Located in flask-server/react-frontend
+Located in src/react-front-end
 
-### How to run
+### How to run front-end
 
 ```
-cd flask-server/react-frontend
+cd src/react-frontend
 
 npm start # hosts on localhost:3000
 
 npm run build # creates the static './build' dir 
 ```
 
-### How to run like production
+---
+
+## Running Production Env
+
+Change stubbed response to false for front-end:
 
 ```
-cd flask-server/react-frontend
+src/react-frontend/.env
+REACT_APP_STUBBED_RESPONSE=false`
+```
 
-npm run build # creates the static './build' dir
+Run backend server and react front-end:
 
-serve -l 3000 # serves directory as Apache server would on port 3000 
+```
+python3 src/python-backend/server.py 
+
+cd src/react-frontend
+npm run build  # creates the static './build' dir
+
+serve -l 3000  # serves directory as Apache server would on port 3000
+
+open http://localhost:3000   # visit static front-end
 ```
 
 ---
 
 ### Docker Postgres DB
-
+Executes init.db if database has not previously been initialised 
 
 `cd postgres-docker-db && docker-compose up -d`
 
 ---
-
-### TODO
- 
-- Serve React/TypeScript frontend from Flask server not the node server
