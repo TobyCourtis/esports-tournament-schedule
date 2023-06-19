@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+p, h1, a {
+    color: ivory;
+}
+
 .month-heading-div {
     display: flex;
     flex-direction: row;
