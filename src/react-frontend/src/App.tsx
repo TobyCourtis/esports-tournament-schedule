@@ -7,13 +7,15 @@ import PageNotFound from "./components/general/PageNotFound";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import PlayersPage from "./pages/Players/PlayersPage";
 import Example from "./components/Example";
+import TailwindHeader from './components/general/TailwindHeader';
 
 function App() {
 
     return (
         <Router>
             <div className="App">
-                <Header/>
+                {/*<Header/>*/}
+                <TailwindHeader />
 
                 <Switch>
                     <Route exact path="/" component={TournamentsPage}/>
